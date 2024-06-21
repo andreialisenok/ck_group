@@ -25,10 +25,12 @@ const tabContent = document.querySelectorAll('.services .tabs-content');
 
 tabBtns.forEach((tab, tabIndex) => {
   tab.addEventListener('click', () => {
-    // tab.classList.contains('active')
-    //   ? tab.classList.remove('active')
-    //   : tab.classList.add('active');
+    tabBtns.forEach((tab) => {
+      tab.classList.remove('active');
+    });
     tab.classList.add('active');
+
+    // tab.classList.add('active');
 
     tabContent.forEach((tabContent, tabContentIndex) => {
       tabContent.classList.remove('active');
