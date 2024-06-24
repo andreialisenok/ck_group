@@ -222,11 +222,11 @@ body {
   top: -15px;
 }
 
-/* section services */
-.services {
+/* section indicators */
+.indicators {
   padding: 150px 0 260px;
 }
-.services h2 {
+.indicators h2 {
   font-family: 'Manrope', sans-serif;
   font-weight: 400;
   font-size: 64px;
@@ -235,20 +235,20 @@ body {
   display: flex;
   flex-direction: column;
 }
-.services h2 span:last-child {
+.indicators h2 span:last-child {
   margin-left: 80px;
 }
-.services__row {
+.indicators__row {
   display: flex;
   justify-content: space-between;
 }
-.services .tabs {
+.indicators .tabs {
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: flex-start;
 }
-.services .tabs button {
+.indicators .tabs button {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
   font-size: 32px;
@@ -258,31 +258,31 @@ body {
   border: none;
   cursor: pointer;
 }
-.services .tabs button:hover {
+.indicators .tabs button:hover {
   color: #fff;
 }
-.services .tabs button.active {
+.indicators .tabs button.active {
   color: #fff;
 }
-.services .tabs-content {
+.indicators .tabs-content {
   display: none;
   flex-direction: column;
   gap: 50px;
   max-width: 500px;
   opacity: 0;
 }
-.services .tabs-content.active {
+.indicators .tabs-content.active {
   display: flex;
   opacity: 1;
   transition: opacity 1s;
 }
-.services .tabs-content p {
+.indicators .tabs-content p {
   font-family: 'Manrope', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.2;
 }
-.services .tabs-content a {
+.indicators .tabs-content a {
   font-family: 'Manrope', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -409,7 +409,7 @@ body {
 .design a:hover {
   text-decoration: underline;
 }
-/* section design */
+/* section equipment */
 
 .equipment {
   padding: 750px 0 100px;
@@ -450,6 +450,17 @@ body {
 .equipment a:hover {
   text-decoration: underline;
 }
+
+/* section services */
+
+
+
+
+
+
+
+
+
 /* footer */
 .footer {
   background: #080fc4;
