@@ -452,14 +452,43 @@ body {
 }
 
 /* section services */
-
-
-
-
-
-
-
-
+.services__row {
+}
+.services__row ul {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+.services__row ul li {
+  padding: 60px;
+  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+}
+.services__row ul li h4 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 45px;
+}
+.services__row ul li p {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  max-width: 500px;
+}
+.services__row ul li button {
+  margin-top: auto;
+}
+.services h2 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 1;
+  margin-bottom: 80px;
+}
 
 /* footer */
 .footer {
