@@ -1,0 +1,2 @@
+!function(){var c=document.querySelectorAll(".services .tabs button"),t=document.querySelectorAll(".services .tabs-content");c.forEach((function(e,s){e.addEventListener("click",(function(){c.forEach((function(c){c.classList.remove("active")})),e.classList.add("active"),t.forEach((function(c,t){c.classList.remove("active"),s===t&&c.classList.add("active")}))}))}))}();
+//# sourceMappingURL=main-dist.js.map

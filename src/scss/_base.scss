@@ -1,0 +1,13 @@
+body {
+  font-family: $manrope;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: $white;
+  background: $dark;
+}
+.container {
+    margin: 0 auto;
+    max-width: 126rem;
+    padding: 0 2rem;
+}

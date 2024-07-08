@@ -1,0 +1,2 @@
+"use strict";var tabBtns=document.querySelectorAll(".services .tabs button"),tabContent=document.querySelectorAll(".services .tabs-content");tabBtns.forEach((function(t,e){t.addEventListener("click",(function(){tabBtns.forEach((function(t){t.classList.remove("active")})),t.classList.add("active"),tabContent.forEach((function(t,c){t.classList.remove("active"),e===c&&t.classList.add("active")}))}))}));
+//# sourceMappingURL=main.js.map
