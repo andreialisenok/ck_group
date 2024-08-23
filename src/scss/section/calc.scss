@@ -1,0 +1,28 @@
+.calc {
+  background: url('./img/calc-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: 65%;
+  padding: 100px 0;
+  position: relative;
+  z-index: 1000;
+  min-height: 960px;
+  @media (min-width: 992px) {
+    padding: 200px 0;
+    background-position: right;
+  }
+  @media (min-width: 1200px) {
+    padding: 300px 0 200px;
+  }
+  h2 {
+    font-size: calc(26px + (56 - 26) * ((100vw - 320px) / (1920 - 320)));
+    max-width: calc(240px + (700 - 240) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 400;
+    margin-bottom: 40px;
+    line-height: 1;
+  }
+  p {
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+    max-width: calc(240px + (630 - 240) * ((100vw - 320px) / (1920 - 320)));
+    margin-bottom: 40px;
+  }
+}

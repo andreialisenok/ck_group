@@ -1,0 +1,246 @@
+.data {
+  background: url('./img/data-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: 65%;
+  padding: 30px 0;
+  position: relative;
+  z-index: 1000;
+  min-height: 1300px;
+  @media (min-width: 768px) {
+    padding: 50px 0;
+  }
+  @media (min-width: 992px) {
+    background-position: right;
+  }
+  .line {
+    display: none;
+    @media (min-width: 1400px) {
+      display: block;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 310px;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        rgba(65, 84, 255, 0) 0%,
+        rgba(65, 84, 255, 1) 50%,
+        rgba(65, 84, 255, 0) 100%
+      );
+      span {
+        display: block;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #080fc4;
+        position: absolute;
+        transform: translateY(-50%);
+        box-shadow: 0 0 20px 0 #0009ff;
+        &:nth-child(1) {
+          left: calc(50% - 610px);
+        }
+        &:nth-child(2) {
+          left: calc(50% - 165px);
+        }
+        &:nth-child(3) {
+          left: calc(50% + 330px);
+        }
+      }
+    }
+  }
+  &__row {
+    h2 {
+      font-size: calc(26px + (46 - 26) * ((100vw - 320px) / (1920 - 320)));
+      background: linear-gradient(135deg, #4154ff 0%, #ffffff 100%);
+      color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 30px;
+    }
+    & > p {
+      font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+      max-width: calc(750px + (750 - 750) * ((100vw - 320px) / (1920 - 320)));
+      margin-bottom: 60px;
+    }
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+    @media (min-width: 992px) {
+      flex-direction: row;
+      gap: 0;
+      justify-content: space-between;
+      margin-bottom: 90px;
+    }
+    &__item {
+      &:nth-child(1) {
+        p {
+          &:nth-of-type(1) {
+            background: url('./img/data-item.png') no-repeat;
+            background-size: contain;
+            width: 201px;
+            height: 38px;
+          }
+          &:nth-of-type(2) {
+            background: url('./img/data-item1.png') no-repeat;
+            background-size: contain;
+            width: 288px;
+            height: 56px;
+          }
+        }
+      }
+      &:nth-child(2) {
+        p {
+          &:nth-of-type(1) {
+            background: url('./img/data-item2.png') no-repeat;
+            background-size: contain;
+            width: 251px;
+            height: 38px;
+          }
+          &:nth-of-type(2) {
+            background: url('./img/data-item3.png') no-repeat;
+            background-size: contain;
+            width: 281px;
+            height: 52px;
+          }
+          &:nth-of-type(3) {
+            background: url('./img/data-item4.png') no-repeat;
+            background-size: contain;
+            width: 298px;
+            height: 38px;
+          }
+          &:nth-of-type(4) {
+            background: url('./img/data-item5.png') no-repeat;
+            background-size: contain;
+            width: 281px;
+            height: 38px;
+          }
+        }
+      }
+      &:nth-child(3) {
+        p {
+          &:nth-of-type(1) {
+            background: url('./img/data-item6.png') no-repeat;
+            background-size: contain;
+            width: 224px;
+            height: 74px;
+          }
+          &:nth-of-type(2) {
+            background: url('./img/data-item7.png') no-repeat;
+            background-size: contain;
+            width: 281px;
+            height: 74px;
+          }
+        }
+      }
+      h5 {
+        font-size: 2.2rem;
+        background: linear-gradient(135deg, #4154ff 0%, #ffffff 100%);
+        color: transparent;
+        background-clip: text;
+        line-height: 1;
+        margin-bottom: 30px;
+        @media (min-width: 992px) {
+          margin-bottom: 80px;
+        }
+      }
+      p {
+        background: url('./img/data-item.png') no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        padding: 0 15px;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  .data__wrap {
+    background: url('./img/form1-bg.jpg') no-repeat;
+    background-size: cover;
+    padding: 20px;
+    height: 590px;
+    position: relative;
+    z-index: 1000;
+    background-position: 65%;
+    @media (min-width: 768px) {
+      padding: 40px 60px;
+    }
+    @media (min-width: 992px) {
+      background-position: right;
+    }
+    h3 {
+      font-size: calc(26px + (42 - 26) * ((100vw - 320px) / (1920 - 320)));
+      font-weight: 400;
+      margin-bottom: 60px;
+      line-height: 1;
+      max-width: 600px;
+      max-width: calc(240px + (600 - 240) * ((100vw - 320px) / (1920 - 320)));
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media (min-width: 768px) {
+    gap: 55px 80px;
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 'name phone' 'mail btn';
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    &:nth-child(1) {
+      grid-area: name;
+    }
+    &:nth-child(2) {
+      grid-area: phone;
+    }
+    &:nth-child(3) {
+      grid-area: mail;
+    }
+    &:nth-child(4) {
+      grid-area: btn;
+    }
+
+    input {
+      font-family: $manrope;
+      width: 100%;
+      background: none;
+      border: none;
+      outline: none;
+      color: $white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 5px;
+      @media (min-width: 768px) {
+        width: 320px;
+      }
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.2);
+      }
+      &:active,
+      &:focus {
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
+  &__title {
+    font-size: calc(16px + (16 - 16) * ((100vw - 320px) / (1920 - 320)));
+  }
+  .iti__dropdown-content {
+    background: #171f8b;
+  }
+  .iti__country-list {
+    scrollbar-width: none;
+  }
+}

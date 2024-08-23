@@ -1,0 +1,27 @@
+.hero {
+  background: url('./img/header-bg.jpg') no-repeat;
+  background-size: cover;
+  padding: 230px 0 130px;
+  min-height: 700px;
+  position: relative;
+  z-index: 1000;
+  background-position: 65%;
+  @media (min-width: 992px) {
+    background-position: right;
+  }
+  &__row {
+    h1 {
+      font-size: calc(26px + (56 - 26) * ((100vw - 320px) / (1920 - 320)));
+      line-height: 1;
+      margin-bottom: 25px;
+      font-weight: 400;
+      max-width: 800px;
+    }
+    p {
+      font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+
+      margin-bottom: 25px;
+      max-width: 550px;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.modal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50000;
+  padding: 20px;
+  overflow: auto;
+  display: none;
+  &.active {
+    display: block;
+  }
+  &__form {
+    background: linear-gradient(135deg, #18198f, rgba(3, 7, 61, 1));
+    max-width: 670px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+    margin: 0 auto;
+    position: relative;
+    @media (min-width: 768px) {
+      padding: 60px 135px 110px;
+    }
+    h2 {
+      font-family: $nunito;
+      font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1920 - 320)));
+
+      font-weight: 400;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #9190b4;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &:last-of-type {
+      justify-content: space-between;
+      align-items: center;
+      @media (min-width: 576px) {
+        flex-direction: row;
+      }
+    }
+    input {
+      color: $white;
+      background: none;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #7174c3;
+      font-family: $manrope;
+      width: 100%;
+      padding: 5px;
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.2);
+      }
+      &:active,
+      &:focus {
+        border-bottom: 1px solid $white;
+      }
+    }
+    .counter {
+      display: flex;
+      width: 200px;
+      gap: 10px;
+
+      button {
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 50%;
+        flex: 1 0 auto;
+        font-size: 2rem;
+        color: $white;
+        cursor: pointer;
+        &:nth-of-type(1) {
+          background: rgba(217, 217, 217, 0.1);
+        }
+        &:nth-of-type(2) {
+          background: #080fc4;
+        }
+      }
+      input {
+        background: none;
+        border: 1px solid #7174c3;
+        border-radius: 20px;
+        font-size: 2rem;
+        color: $white;
+        text-align: center;
+        padding: 0 20px;
+      }
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    padding: 5px;
+    background: none;
+    border: none;
+  }
+  .iti__dropdown-content {
+    background: #171f8b;
+  }
+  .iti__country-list {
+    scrollbar-width: none;
+  }
+}

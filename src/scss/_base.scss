@@ -1,13 +1,37 @@
 body {
   font-family: $manrope;
-  font-size: 1.8rem;
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+  line-height: calc(1.2em + (1.2 - 1.2) * ((100vw - 320px) / (1920 - 320)));
   font-weight: 400;
-  line-height: 1.2;
+
   color: $white;
   background: $dark;
 }
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
 .container {
-    margin: 0 auto;
-    max-width: 126rem;
-    padding: 0 2rem;
+  margin: 0 auto;
+  max-width: 126rem;
+  padding: 0 2rem;
+}
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: $black;
+  opacity: 0.5;
+  z-index: -1000;
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+.isLock {
+  overflow: hidden;
 }

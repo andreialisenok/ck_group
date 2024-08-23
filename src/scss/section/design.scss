@@ -1,0 +1,105 @@
+.design {
+  background: url('./img/design-bg.jpg') no-repeat;
+  background-size: cover;
+  min-height: 2100px;
+  padding: 100px 0;
+  position: relative;
+  z-index: 1000;
+  background-position: 65%;
+  @media (min-width: 992px) {
+    padding: 700px 0 50px;
+    background-position: right;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+    align-items: center;
+    @media (min-width: 1200px) {
+      margin-bottom: 120px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    h2 {
+      max-width: calc(300px + (480 - 300) * ((100vw - 320px) / (1920 - 320)));
+      font-size: calc(26px + (56 - 26) * ((100vw - 320px) / (1920 - 320)));
+      font-weight: 400;
+      line-height: 1;
+    }
+    p {
+      color: $white;
+      font-size: 1.8rem;
+      max-width: calc(300px + (480 - 300) * ((100vw - 320px) / (1920 - 320)));
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    @media (min-width: 1300px) {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    li {
+      max-width: 595px;
+      width: 100%;
+      height: 284px;
+      padding: 20px;
+      position: relative;
+      z-index: 1000;
+      @media (min-width: 992px) {
+        padding: 50px 200px 50px 50px;
+      }
+      &:nth-child(1) {
+        background: url('./img/design-item.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      &:nth-child(2) {
+        background: url('./img/design-item1.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      &:nth-child(3) {
+        background: url('./img/design-item2.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      &:nth-child(4) {
+        background: url('./img/design-item3.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      &:nth-child(5) {
+        background: url('./img/design-item4.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      &:nth-child(6) {
+        background: url('./img/design-item5.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      h5 {
+        font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
+        margin-bottom: 20px;
+        line-height: 1;
+      }
+      p {
+        font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+      }
+    }
+  }
+  .text {
+    text-align: center;
+    margin: 50px 0 20px;
+  }
+  .btn {
+    margin: 0 auto;
+  }
+}
