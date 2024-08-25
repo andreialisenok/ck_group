@@ -1,0 +1,150 @@
+doctype html
+html
+head
+    title="ЦК ГРУПП"
+    meta(charset='utf-8')
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(name='description', content="")
+    meta(name='keywords', content="")
+    meta(name="author", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover")
+    link(rel="icon" type="image/x-icon" href="./favicon.ico")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.1.1/build/css/intlTelInput.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css")
+    link(rel="stylesheet", href="./main.css")
+body
+    .wrap
+        header.header
+            .container
+                .header__row
+                    a(href="#").logo
+                        img(src="./img/logo.png", alt="ЦК ГРУПП")
+                    ul.menu
+                        li.menu__item
+                            a(href='#').menu__link Услуги
+                        li.menu__item
+                            a(href='#').menu__link Калькулятор
+                        li.menu__item
+                            a(href='#').menu__link Оборудование
+                        li.menu__item
+                            a(href='#').menu__link О нас
+                        li.menu__item
+                            button(type='button').btn.application Оставить заявку
+                    button(type='button').btn.header__btn.application Оставить заявку
+                    button(type='button').burger
+                        span
+                        span
+                        span
+        main.main
+            section.calc-page
+                .container
+                    .calc-page__row
+                        h2 Калькулятор доходности
+                        .calc-page__form
+                            .select
+                                select#equipment(onchange="setEquipment()")
+                                    option Выберите оборудование
+                                    option(data-consumption="2000", data-hashrate="200") Miner 1 - &amp;#x442;&amp;#x438;&amp;#x43F; 1
+                                    option(data-consumption="4000", data-hashrate="400") Miner 1 - &amp;#x442;&amp;#x438;&amp;#x43F; 2
+                                    option(data-consumption="2000", data-hashrate="200") Miner 2 - &amp;#x442;&amp;#x438;&amp;#x43F; 3
+                                    option(data-consumption="4000", data-hashrate="400") Miner 2 - &amp;#x442;&amp;#x438;&amp;#x43F; 4
+                            div.calc-page__item
+                                label(for="electricityCost") Стоимость электричества (1 к-ват)
+                                input#electricityCost(type="number", min="0.01", value="0.01")
+                            div.calc-page__item
+                                label(for="hashrate") Мощность
+                                input#hashrate(type="number", value="190", min="1")
+                            div.calc-page__item
+                                label(for="consumption") Потребление
+                                input#consumption(type="number", min="1", value="1")
+                            div.calc-page__item
+                                label(for="rateUSD") Курс USD
+                                input#rateUSD(type="number", min="1", value="1")
+                            div.calc-page__item
+                                label(for="rateBTC") Курс BTC
+                                input#rateBTC(type="number", min="1", value="64187.1")
+                            div.calc-page__item
+                                label(for="commission") Комиссия
+                                input#commission(type="number", min="0", value="0")
+                            input(type="hidden", id="dailyIncomeTh_s_usdt")
+                            input#difficulty(type="hidden", value="86871474313762")
+                            input(type="hidden", id="hashrate_s", value="1000000000000")
+                            input#blockReward(type="hidden", value="3.125")
+                        .result#result
+                                .result__wrap
+                                    .result__data
+                                        p День
+                                        p Неделя
+                                        p Месяц
+                                        p Доход
+                                        p#dayIncome 1
+                                        p#weekIncome 7
+                                        p#monthIncome 30
+                                        p Расход
+                                        p#dayOutGo 1
+                                        p#weekOutGo 7
+                                        p#monthOutGo 30
+                                    .currency#currency
+                                        p Валюта
+                                        .currency__btns
+                                            button.currency__btn.active(type="button")(data-rateUSD="1")(data-sign="$")
+                                                svg(width="15" height="26" viewBox="0 0 15 26" xmlns="http://www.w3.org/2000/svg")
+                                                    path(d="M6.25102 25.2136V22.1644H8.60062V25.2136H6.25102ZM6.25102 4.02761V0.96521H8.60062V4.02761H6.25102ZM7.61062 22.996C6.32582 22.996 5.16862 22.7672 4.13902 22.3096C3.11822 21.8432 2.27782 21.1876 1.61782 20.3428C0.957819 19.4892 0.526619 18.486 0.324219 17.3332L2.63422 16.9504C2.91582 18.1208 3.50982 19.0492 4.41622 19.7356C5.33142 20.422 6.43142 20.7652 7.71622 20.7652C9.00982 20.7652 10.057 20.4528 10.8578 19.828C11.6586 19.2032 12.059 18.398 12.059 17.4124C12.059 16.6908 11.8434 16.11 11.4122 15.67C10.9898 15.23 10.277 14.856 9.27382 14.548L4.93102 13.2016C2.33502 12.392 1.03702 10.8432 1.03702 8.55521C1.03702 7.48161 1.29662 6.54441 1.81582 5.74361C2.34382 4.93401 3.07862 4.30921 4.02022 3.86921C4.97062 3.42041 6.07502 3.20041 7.33342 3.20921C8.55662 3.21801 9.64782 3.44681 10.607 3.89561C11.5662 4.33561 12.3582 4.96921 12.983 5.79641C13.6166 6.62361 14.0434 7.61361 14.2634 8.76641L11.8874 9.20201C11.7642 8.45401 11.4914 7.79841 11.069 7.23521C10.6554 6.67201 10.1274 6.23641 9.48502 5.92841C8.84262 5.61161 8.12102 5.44881 7.32022 5.44001C6.57222 5.43121 5.89902 5.55441 5.30062 5.80961C4.71102 6.06481 4.24462 6.42121 3.90142 6.87881C3.55822 7.33641 3.38662 7.86001 3.38662 8.44961C3.38662 9.09201 3.62422 9.63761 4.09942 10.0864C4.58342 10.5264 5.34022 10.9048 6.36982 11.2216L9.93382 12.2776C11.5002 12.744 12.631 13.3732 13.3262 14.1652C14.0214 14.9484 14.369 15.9956 14.369 17.3068C14.369 18.442 14.0874 19.4364 13.5242 20.29C12.9698 21.1436 12.1822 21.808 11.1614 22.2832C10.1494 22.7584 8.96582 22.996 7.61062 22.996Z")
+
+
+                                            button.currency__btn(type="button")(data-rateUSD="92.80")(data-sign="₽")
+                                                svg(width="16" height="20" viewBox="0 0 16 20" xmlns="http://www.w3.org/2000/svg")
+                                                    path(d="M0.448242 12.406V10.3336H9.46384C9.61344 10.3336 9.78944 10.3248 9.99184 10.3072C10.203 10.2896 10.423 10.2544 10.6518 10.2016C11.5318 9.99038 12.183 9.55478 12.6054 8.89478C13.0278 8.23478 13.239 7.47798 13.239 6.62438C13.239 6.07878 13.151 5.55078 12.975 5.04038C12.799 4.52998 12.5174 4.08558 12.1302 3.70718C11.7518 3.32878 11.259 3.07358 10.6518 2.94158C10.4406 2.87998 10.2206 2.84478 9.99184 2.83598C9.77184 2.82718 9.59584 2.82278 9.46384 2.82278H4.11784V0.59198H9.54304C9.67504 0.59198 9.86424 0.59638 10.1106 0.605181C10.3658 0.61398 10.643 0.64478 10.9422 0.69758C11.9718 0.85598 12.8342 1.20798 13.5294 1.75358C14.2334 2.29918 14.7614 2.98558 15.1134 3.81278C15.4654 4.63998 15.6414 5.55958 15.6414 6.57158C15.6414 8.07638 15.2454 9.34798 14.4534 10.3864C13.6614 11.416 12.491 12.054 10.9422 12.3004C10.643 12.3444 10.3658 12.3752 10.1106 12.3928C9.86424 12.4016 9.67504 12.406 9.54304 12.406H0.448242ZM0.448242 16.5904V14.65H11.0082V16.5904H0.448242ZM2.42824 19.6V0.59198H4.77784V19.6H2.42824Z")
+                                    button(onclick="calcResult()").calResult Рассчитать
+                                    #monthProfit 0
+        footer.footer
+            .container
+                .footer__row
+                    a.logo
+                        img(src="./img/logo.png", alt="ЦК ГРУПП")
+                    p Цифра Капитал Групп
+                    ul
+                        li
+                            a(href='#') Услуги
+                        li
+                            a(href='#') Калькулятор
+                        li
+                            a(href='#') Оборудование
+                        li
+                            a(href='#') О нас
+                    .contacts
+                        a(href="tel:+7 (916) 954 67 19") +7 (916) 954 67 19
+                        a(href="mailto:cifracapital@cifracapitalgroup.ru") cifracapital@cifracapitalgroup.ru
+                        div
+                            a(href="http://", target="_blank", rel="noopener noreferrer")
+                                img(src="./img/social/tg.svg", alt="")
+                            a(href="http://", target="_blank", rel="noopener noreferrer")
+                                img(src="./img/social/whatsapp.svg", alt="")
+        .modal
+            .modal__form
+                h2 Заказать продукт
+                button(type="button").modal__close
+                    img(src="./img/close.svg", alt="")
+                .modal__item
+                    span.form__title Ваше имя
+                    input(type="text", name="" placeholder="Имя")
+                .modal__item
+                    span.form__title Телефон
+                    input(type="tel", name="" placeholder="").phone
+                .modal__item
+                    span.form__title  Продукт
+                    input(type="text", name="" placeholder="Bitmain Antminer T21 190 TH/s")
+                .modal__item
+                    span.form__title  Цена
+                    input(type="text", name="" placeholder="545 000 ₽")
+                .modal__item
+                    .counter
+                        button(type="button") -
+                        input(type="text", name="" value="1")
+                        button(type="button") +
+                    button(type="button").btn Отправить
+                p Продолжая, вы соглашаетесь с политикой конфиденциальности
+    script(src='https://cdn.jsdelivr.net/npm/intl-tel-input@24.1.1/build/js/intlTelInput.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js')
+    script(src='./main.js')

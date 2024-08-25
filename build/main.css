@@ -2007,4 +2007,460 @@ img {
 .design .btn {
   margin: 0 auto;
 }
+
+.calc-page {
+  background: url("./img/calc-page-bg.jpg") no-repeat;
+  padding: 175px 0 110px;
+  background-size: cover;
+}
+.calc-page h2 {
+  font-size: calc(26px + 38 * (100vw - 320px) / 1600);
+  margin-bottom: 60px;
+  text-align: center;
+  line-height: 1;
+}
+.calc-page__form {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "select" "item1" "item2" "item3" "item4" "item5" "item6";
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) {
+  .calc-page__form {
+    -ms-grid-columns: 1fr 60px 1fr 60px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto 30px auto 30px auto;
+        grid-template-areas: "select . ." "item1 item2 item3" "item4 item5 item6";
+    gap: 30px 60px;
+  }
+}
+.calc-page__form .select {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  position: relative;
+  grid-area: select;
+  margin-bottom: 50px;
+}
+.calc-page__form .select::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 20px);
+  background: url("./img/arrow.svg") no-repeat;
+  background-size: contain;
+  width: 29px;
+  height: 29px;
+}
+.calc-page__form .select select {
+  background: none;
+  border: 1px solid #fff;
+  padding: 20px 60px 20px 20px;
+  color: #fff;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+.calc-page__form .select select option {
+  background: #00001F;
+  color: #fff;
+}
+.calc-page__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.calc-page__item:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+.calc-page__item:nth-of-type(2) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: item1;
+}
+.calc-page__item:nth-of-type(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: item2;
+}
+.calc-page__item:nth-of-type(4) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: item3;
+}
+.calc-page__item:nth-of-type(5) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: item4;
+}
+.calc-page__item:nth-of-type(6) {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: item5;
+}
+.calc-page__item:nth-of-type(7) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: item6;
+}
+@media (min-width: 992px){
+  .calc-page__form .select {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .calc-page__item:nth-of-type(2) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .calc-page__item:nth-of-type(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .calc-page__item:nth-of-type(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+  }
+  .calc-page__item:nth-of-type(5) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .calc-page__item:nth-of-type(6) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .calc-page__item:nth-of-type(7) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
+  }
+}
+.calc-page__item label {
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.6rem;
+}
+.calc-page__item input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #373857;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.8rem;
+  padding: 10px;
+  color: #fff;
+  width: 100%;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.5;
+}
+.calc-page__item input:active, .calc-page__item input:focus {
+  background: url("./img/input-shadow.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  border-bottom: 1px solid #1c24ff;
+}
+
+.result {
+  background: rgba(0, 0, 0, 0.23);
+  padding: 20px;
+  position: relative;
+  z-index: 100;
+  overflow: hidden;
+}
+.result::before {
+  position: absolute;
+  content: "";
+  width: 1000px;
+  height: 500px;
+  border-radius: 50%;
+  right: -200px;
+  top: -300px;
+  background: #080FC4;
+  z-index: -100;
+  -webkit-filter: blur(250px);
+          filter: blur(250px);
+}
+.result__wrap {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "data data" "btns btns" "calResult calResult" "result result";
+  gap: 20px 0;
+}
+@media (min-width: 768px) {
+  .result__wrap {
+        grid-template-areas: "data data" "btns calResult" "result result";
+    gap: 20px;
+  }
+}
+.result__wrap .calResult {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  border: none;
+  background: url("./img/btn-bg.png") no-repeat;
+  background-size: contain;
+  width: 171px;
+  height: 38px;
+  font-size: 16px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  grid-area: calResult;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+@media (min-width: 768px) {
+  .result__wrap .calResult {
+    -ms-grid-column-align: left;
+        justify-self: left;
+  }
+}
+.result__wrap .currency {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: btns;
+  background: none;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  .result__wrap .currency {
+    -ms-grid-column-align: right;
+        justify-self: right;
+  }
+}
+.result__wrap .currency__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+  background: rgba(217, 217, 217, 0.1);
+  border-radius: 44px;
+}
+.result__wrap .currency__btns button {
+  border: none;
+  background: none;
+  color: rgba(255, 255, 255, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  fill: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.result__wrap .currency__btns button.active {
+  color: #fff;
+  background: #080FC4;
+}
+.result__wrap #monthProfit {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: result;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+.result__data {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: data;
+  overflow: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: ". day week month" "income dayIncome weekIncome monthIncome" "outGo dayOutGo weekOutGo monthOutGo";
+}
+@media (min-width: 768px){
+  .result__wrap .calResult {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+  .result__wrap .currency {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .result__wrap #monthProfit {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .result__data {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+}
+.result__data p {
+  padding: 20px 50px;
+}
+.result__data p:nth-of-type(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: day;
+  text-align: center;
+  -o-border-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)) 1;
+     border-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.2))) 1;
+     border-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)) 1;
+  border-width: 1px;
+  border-style: solid;
+  border-top: none;
+  border-bottom: none;
+}
+.result__data p:nth-of-type(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: week;
+  text-align: center;
+  -o-border-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)) 1;
+     border-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.2))) 1;
+     border-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)) 1;
+  border-width: 1px;
+  border-style: solid;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+}
+.result__data p:nth-of-type(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: month;
+  text-align: center;
+  -o-border-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0))) 1;
+     border-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) 1;
+  border-width: 1px;
+  border-style: solid;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+}
+.result__data p:nth-of-type(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: income;
+  -o-border-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.2))) 1;
+     border-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)) 1;
+  border-width: 1px;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+}
+.result__data p:nth-of-type(5) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: dayIncome;
+  text-align: center;
+  -o-border-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)) 1;
+     border-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.2))) 1;
+     border-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)) 1;
+  border-width: 1px;
+  border-style: solid;
+}
+.result__data p:nth-of-type(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: weekIncome;
+  text-align: center;
+  -o-border-image: linear-gradient(rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.2)) 1;
+     border-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2))) 1;
+     border-image: linear-gradient(rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.2)) 1;
+  border-width: 1px;
+  border-style: solid;
+  border-left: none;
+}
+.result__data p:nth-of-type(7) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: monthIncome;
+  text-align: center;
+  -o-border-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0))) 1;
+     border-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) 1;
+  border-width: 1px;
+  border-style: solid;
+  border-left: none;
+}
+.result__data p:nth-of-type(8) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: outGo;
+}
+.result__data p:nth-of-type(9) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: dayOutGo;
+  text-align: center;
+  -o-border-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) 1;
+     border-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0))) 1;
+     border-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) 1;
+  border-width: 1px;
+  border-style: solid;
+  border-top: none;
+  border-bottom: none;
+}
+.result__data p:nth-of-type(10) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: weekOutGo;
+  text-align: center;
+  -o-border-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) 1;
+     border-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0))) 1;
+     border-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) 1;
+  border-width: 1px;
+  border-style: solid;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+}
+.result__data p:nth-of-type(11) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: monthOutGo;
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */

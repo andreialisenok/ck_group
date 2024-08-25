@@ -1,0 +1,350 @@
+.calc-page {
+  background: url('./img/calc-page-bg.jpg') no-repeat;
+  padding: 175px 0 110px;
+  background-size: cover;
+  h2 {
+    font-size: calc(26px + (64 - 26) * ((100vw - 320px) / (1920 - 320)));
+    margin-bottom: 60px;
+    text-align: center;
+    line-height: 1;
+  }
+  &__form {
+    display: grid;
+    grid-template-areas:
+      'select'
+      'item1'
+      'item2'
+      'item3'
+      'item4'
+      'item5'
+      'item6';
+    margin-bottom: 30px;
+    @media (min-width: 992px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        'select . .'
+        'item1 item2 item3'
+        'item4 item5 item6';
+      gap: 30px 60px;
+    }
+    .select {
+      position: relative;
+      grid-area: select;
+      margin-bottom: 50px;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: calc(50% - 20px);
+        background: url('./img/arrow.svg') no-repeat;
+        background-size: contain;
+        width: 29px;
+        height: 29px;
+      }
+      select {
+        background: none;
+        border: 1px solid $white;
+        padding: 20px 60px 20px 20px;
+        color: $white;
+        appearance: none;
+        width: 100%;
+        font-family: $manrope;
+        font-size: 1.8rem;
+        line-height: 1.2;
+
+        option {
+          background: $dark;
+          color: $white;
+        }
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+    &:nth-of-type(2) {
+      grid-area: item1;
+    }
+    &:nth-of-type(3) {
+      grid-area: item2;
+    }
+    &:nth-of-type(4) {
+      grid-area: item3;
+    }
+    &:nth-of-type(5) {
+      grid-area: item4;
+    }
+    &:nth-of-type(6) {
+      grid-area: item5;
+    }
+    &:nth-of-type(7) {
+      grid-area: item6;
+    }
+    label {
+      color: $white;
+      font-family: $manrope;
+      font-size: 1.6rem;
+    }
+    input {
+      background: none;
+      border: none;
+      border-bottom: 1px solid #373857;
+      font-family: $manrope;
+      font-size: 1.8rem;
+      padding: 10px;
+      color: $white;
+      width: 100%;
+      outline: none;
+      transition: all 0.3s ease-in-out;
+      opacity: 0.5;
+      &:active,
+      &:focus {
+        background: url('./img/input-shadow.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+        opacity: 1;
+        border-bottom: 1px solid #1c24ff;
+      }
+    }
+  }
+}
+.result {
+  background: rgba(0, 0, 0, 0.23);
+  padding: 20px;
+  position: relative;
+  z-index: 100;
+  overflow: hidden;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 1000px;
+    height: 500px;
+    border-radius: 50%;
+    right: -200px;
+    top: -300px;
+    background: $blue;
+    z-index: -100;
+    filter: blur(250px);
+  }
+  &__wrap {
+    display: grid;
+    grid-template-areas:
+      'data data'
+      'btns btns'
+      'calResult calResult'
+      'result result';
+    gap: 20px 0;
+    @media (min-width: 768px) {
+      grid-template-areas:
+        'data data'
+        'btns calResult'
+        'result result';
+      gap: 20px;
+    }
+    .calResult {
+      border: none;
+      background: url('./img/btn-bg.png') no-repeat;
+      background-size: contain;
+      width: 171px;
+      height: 38px;
+      font-size: 16px;
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      grid-area: calResult;
+      justify-self: center;
+      @media (min-width: 768px) {
+        justify-self: left;
+      }
+    }
+    .currency {
+      grid-area: btns;
+      background: none;
+      color: $white;
+      font-family: $manrope;
+      font-size: 1.8rem;
+      line-height: 1.2;
+      justify-self: center;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      @media (min-width: 768px) {
+        justify-self: right;
+      }
+      &__btns {
+        display: flex;
+        gap: 5px;
+        padding: 5px;
+        background: rgba(217, 217, 217, 0.1);
+        border-radius: 44px;
+
+        button {
+          border: none;
+          background: none;
+          color: rgba(255, 255, 255, 0.4);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          fill: $white;
+          cursor: pointer;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          &.active {
+            color: $white;
+            background: $blue;
+          }
+        }
+      }
+    }
+    #monthProfit {
+      grid-area: result;
+      justify-self: center;
+    }
+  }
+  &__data {
+    grid-area: data;
+    overflow: auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      '. day week month'
+      'income dayIncome weekIncome monthIncome'
+      'outGo dayOutGo weekOutGo monthOutGo';
+    p {
+      padding: 20px 50px;
+      &:nth-of-type(1) {
+        grid-area: day;
+        text-align: center;
+        border-image: linear-gradient(
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0.2)
+          )
+          1;
+        border-width: 1px;
+        border-style: solid;
+        border-top: none;
+        border-bottom: none;
+      }
+      &:nth-of-type(2) {
+        grid-area: week;
+        text-align: center;
+        border-image: linear-gradient(
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0.2)
+          )
+          1;
+        border-width: 1px;
+        border-style: solid;
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+      }
+      &:nth-of-type(3) {
+        grid-area: month;
+        text-align: center;
+        border-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0)
+          )
+          1;
+        border-width: 1px;
+        border-style: solid;
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+      }
+      &:nth-of-type(4) {
+        grid-area: income;
+        border-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0.2)
+          )
+          1;
+        border-width: 1px;
+        border-style: solid;
+        border-left: none;
+        border-right: none;
+      }
+      &:nth-of-type(5) {
+        grid-area: dayIncome;
+        text-align: center;
+        border-image: linear-gradient(
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.2)
+          )
+          1;
+        border-width: 1px;
+        border-style: solid;
+      }
+      &:nth-of-type(6) {
+        grid-area: weekIncome;
+        text-align: center;
+        border-image: linear-gradient(
+            rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.2)
+          )
+          1;
+        border-width: 1px;
+        border-style: solid;
+        border-left: none;
+      }
+      &:nth-of-type(7) {
+        grid-area: monthIncome;
+        text-align: center;
+        border-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0)
+          )
+          1;
+        border-width: 1px;
+        border-style: solid;
+        border-left: none;
+      }
+      &:nth-of-type(8) {
+        grid-area: outGo;
+      }
+      &:nth-of-type(9) {
+        grid-area: dayOutGo;
+        text-align: center;
+        border-image: linear-gradient(
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0)
+          )
+          1;
+        border-width: 1px;
+        border-style: solid;
+        border-top: none;
+        border-bottom: none;
+      }
+      &:nth-of-type(10) {
+        grid-area: weekOutGo;
+        text-align: center;
+        border-image: linear-gradient(
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0)
+          )
+          1;
+        border-width: 1px;
+        border-style: solid;
+        border-top: none;
+        border-bottom: none;
+        border-left: none;
+      }
+      &:nth-of-type(11) {
+        grid-area: monthOutGo;
+        text-align: center;
+      }
+    }
+  }
+}
