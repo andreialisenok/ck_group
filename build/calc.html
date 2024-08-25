@@ -41,10 +41,10 @@
               <div class="select">
                 <select id="equipment" onchange="setEquipment()">
                   <option>Выберите оборудование</option>
-                  <option data-consumption="2000" data-hashrate="200">Miner 1 - &amp;#x442;&amp;#x438;&amp;#x43F; 1</option>
-                  <option data-consumption="4000" data-hashrate="400">Miner 1 - &amp;#x442;&amp;#x438;&amp;#x43F; 2</option>
-                  <option data-consumption="2000" data-hashrate="200">Miner 2 - &amp;#x442;&amp;#x438;&amp;#x43F; 3</option>
-                  <option data-consumption="4000" data-hashrate="400">Miner 2 - &amp;#x442;&amp;#x438;&amp;#x43F; 4</option>
+                  <option data-consumption="2000" data-hashrate="200">Miner 1</option>
+                  <option data-consumption="4000" data-hashrate="400">Miner 2</option>
+                  <option data-consumption="2000" data-hashrate="200">Miner 3</option>
+                  <option data-consumption="4000" data-hashrate="400">Miner 4</option>
                 </select>
               </div>
               <div class="calc-page__item">
@@ -107,8 +107,27 @@
                   </div>
                 </div>
                 <button class="calResult" onclick="calcResult()">Рассчитать</button>
-                <div id="monthProfit">0</div>
+                <div id="monthProfit">Прибыль в месяц:</div>
               </div>
+            </div>
+            <div class="calc-page__wrap">
+              <div class="mask"></div>
+              <h3>Погрузитесь в мир майнинга с нами!</h3>
+              <p>Давно хотели стать частью криптомира? Мы станем вашим надежным партнером</p>
+              <ul class="form">
+                <li class="form__item"><span class="form__title">Ваше имя</span>
+                  <input type="text" name placeholder="Имя">
+                </li>
+                <li class="form__item"><span class="form__title">Телефон</span>
+                  <input class="phone" type="tel" name placeholder>
+                </li>
+                <li class="form__item"><span class="form__title"> Электронная почта</span>
+                  <input type="email" name placeholder="youmail@gmail.com">
+                </li>
+                <li class="form__item">
+                  <button class="btn application" type="button">Оставить заявку</button>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

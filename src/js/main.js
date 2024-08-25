@@ -92,7 +92,7 @@ function updateResultTable(data) {
   ).innerHTML = `${data.outgo.month} ${data.currency.name}`;
   document.getElementById(
     'monthProfit'
-  ).innerHTML = `${data.monthProfit} ${data.currency.name}`;
+  ).innerHTML = `Прибыль в месяц: ${data.monthProfit} ${data.currency.name}`;
 }
 
 function calcResult() {
