@@ -5,20 +5,6 @@ const body = document.querySelector('body');
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 const inputsPhone = document.querySelectorAll("[type='tel']");
-application.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    modal.classList.toggle('active');
-    body.classList.toggle('isLock');
-  });
-});
-// modalClose.addEventListener('click', () => {
-//   modal.classList.toggle('active');
-//   body.classList.toggle('isLock');
-// });
-// modalClose.addEventListener('click', () => {
-//   menu.classList.toggle('isOpen');
-//   burger.classList.toggle('isOpen');
-// });
 inputsPhone.forEach((item) => {
   window.intlTelInput(item, {
     utilsScript:
@@ -360,5 +346,3 @@ yearsBtns.forEach((item, idx) => {
     });
   });
 });
-
-console.log('hello');

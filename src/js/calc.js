@@ -4,14 +4,6 @@ const application = document.querySelectorAll('.application');
 const body = document.querySelector('body');
 const inputsPhone = document.querySelectorAll("[type='tel']");
 
-// modalClose.addEventListener('click', () => {
-//   modal.classList.toggle('active');
-//   body.classList.toggle('isLock');
-// });
-// modalClose.addEventListener('click', () => {
-//   menu.classList.toggle('isOpen');
-//   burger.classList.toggle('isOpen');
-// });
 inputsPhone.forEach((item) => {
   window.intlTelInput(item, {
     utilsScript:
@@ -40,29 +32,6 @@ tabBtns.forEach((tab, tabIndex) => {
     // tab.classList.add('active');
 
     tabContent.forEach((tabContent, tabContentIndex) => {
-      tabContent.classList.remove('active');
-      if (tabIndex === tabContentIndex) {
-        tabContent.classList.add('active');
-      }
-    });
-  });
-});
-
-const equipmentTabs = document.querySelectorAll('.equipment-page .btns button');
-const equipmentTabsContent = document.querySelectorAll(
-  '.equipment-page .equipment-page__info'
-);
-
-equipmentTabs.forEach((tab, tabIndex) => {
-  tab.addEventListener('click', () => {
-    equipmentTabs.forEach((tab) => {
-      tab.classList.remove('active');
-    });
-    tab.classList.add('active');
-
-    // tab.classList.add('active');
-
-    equipmentTabsContent.forEach((tabContent, tabContentIndex) => {
       tabContent.classList.remove('active');
       if (tabIndex === tabContentIndex) {
         tabContent.classList.add('active');
@@ -201,4 +170,8 @@ function calcDailyIncomeTH_s_usdt() {
   //console.log(dailyIncomeTh_s_usdt)
   return dailyIncomeTh_s_usdt;
 }
-
+const currencyBtns = '.currency__btn';
+$(currencyBtns).on('click', function () {
+  $(currencyBtns).removeClass('active');
+  $(this).addClass('active');
+});
