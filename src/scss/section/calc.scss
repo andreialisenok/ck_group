@@ -6,6 +6,7 @@
   position: relative;
   z-index: 1000;
   min-height: 960px;
+  overflow: hidden;
   @media (min-width: 992px) {
     padding: 200px 0;
     background-position: right;

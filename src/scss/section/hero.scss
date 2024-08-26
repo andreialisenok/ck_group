@@ -6,6 +6,7 @@
   position: relative;
   z-index: 1000;
   background-position: 65%;
+  overflow: hidden;
   @media (min-width: 992px) {
     background-position: right;
   }

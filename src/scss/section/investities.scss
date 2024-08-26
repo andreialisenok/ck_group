@@ -3,6 +3,7 @@
   background: $dark;
   position: relative;
   z-index: 1000;
+  overflow: hidden;
   @media (min-width: 768px) {
     padding: 120px 0 105px;
   }

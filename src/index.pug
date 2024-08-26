@@ -17,15 +17,15 @@ body
         header.header
             .container
                 .header__row
-                    a.logo(href='/')
+                    a.logo(href='/build')
                         img(src='./img/logo.png' alt='ЦК ГРУПП')
                     ul.menu
                         li.menu__item
                             a.menu__link(href='calc.html') Калькулятор
                         li.menu__item
-                            a.menu__link(href='') Оборудование
+                            a.menu__link(href='equipment.html') Оборудование
                         li.menu__item
-                            a.menu__link(href='') О нас
+                            a.menu__link(href='about.html') О нас
                         li.menu__item
                             button.btn.application(type='button') Оставить заявку
                     button.btn.header__btn.application(type='button') Оставить заявку
@@ -342,16 +342,16 @@ body
         footer.footer
             .container
                 .footer__row
-                    a.logo
+                    a(href="/build").logo
                         img(src='./img/logo.png' alt='ЦК ГРУПП')
                     p Цифра Капитал Групп
                     ul
                         li
                             a(href='calc.html') Калькулятор
                         li
-                            a(href='#') Оборудование
+                            a(href='equipment.html') Оборудование
                         li
-                            a(href='#') О нас
+                            a(href='about.html') О нас
                     .contacts
                         a(href='tel:+7 (916) 954 67 19') +7 (916) 954 67 19
                         a(href='mailto:cifracapital@cifracapitalgroup.ru') cifracapital@cifracapitalgroup.ru
@@ -363,4 +363,8 @@ body
     script(src='https://cdn.jsdelivr.net/npm/intl-tel-input@24.1.1/build/js/intlTelInput.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js')
+    script(src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js')
+    script(src='https://unpkg.com/gsap@3/dist/MotionPathPlugin.min.js')
+    script(src='https://unpkg.com/gsap@3/dist/gsap.min.js')
+    script(src='https://assets.codepen.io/16327/DrawSVGPlugin3.min.js')
     script(src='./main.js')

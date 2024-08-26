@@ -1,0 +1,55 @@
+.about-page {
+  background: url("./img/calc-page-bg.jpg") no-repeat;
+  padding: 260px 0 0px;
+  background-size: cover;
+  background-position: 65%;
+  min-height: 1200px;
+}
+@media (min-width: 992px) {
+  .about-page {
+    background-position: right;
+  }
+}
+.about-page h2 {
+  font-size: calc(26px + 30 * (100vw - 320px) / 1600);
+  margin-bottom: 60px;
+  text-align: center;
+  line-height: 1;
+}
+@media (min-width: 992px) {
+  .about-page h2 {
+    margin-bottom: 180px;
+  }
+}
+.about-page .svg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.about-page #the-line {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.4);
+  stroke-miterlimit: 10;
+  stroke-width: 10px;
+}
+.about-page #green-line {
+  fill: none;
+  stroke: rgb(255, 255, 255);
+  stroke-miterlimit: 10;
+  stroke-width: 10px;
+}
+.about-page .years {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.about-page .years div {
+  color: #fff;
+  font-family: Arial;
+  font-size: 40px;
+  cursor: pointer;
+}

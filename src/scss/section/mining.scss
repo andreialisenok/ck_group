@@ -5,9 +5,8 @@
   padding: 30px 0;
   position: relative;
   z-index: 1000;
-  &.no__bg {
-    background: none;
-  }
+  overflow: hidden;
+
   @media (min-width: 768px) {
     padding: 50px 0;
   }

@@ -54,6 +54,30 @@ tabBtns.forEach((tab, tabIndex) => {
     });
   });
 });
+
+const equipmentTabs = document.querySelectorAll('.equipment-page .btns button');
+const equipmentTabsContent = document.querySelectorAll(
+  '.equipment-page .equipment-page__info'
+);
+
+equipmentTabs.forEach((tab, tabIndex) => {
+  tab.addEventListener('click', () => {
+    equipmentTabs.forEach((tab) => {
+      tab.classList.remove('active');
+    });
+    tab.classList.add('active');
+
+    // tab.classList.add('active');
+
+    equipmentTabsContent.forEach((tabContent, tabContentIndex) => {
+      tabContent.classList.remove('active');
+      if (tabIndex === tabContentIndex) {
+        tabContent.classList.add('active');
+      }
+    });
+  });
+});
+
 AOS.init({
   duration: 1200,
 });
@@ -185,8 +209,3 @@ function calcDailyIncomeTH_s_usdt() {
   return dailyIncomeTh_s_usdt;
 }
 
-const currencyBtns = '.currency__btn';
-$(currencyBtns).on('click', function () {
-  $(currencyBtns).removeClass('active');
-  $(this).addClass('active');
-});

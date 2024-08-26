@@ -18,7 +18,10 @@ img {
   padding: 0 2rem;
 }
 .wrap {
-  overflow: hidden;
+  // overflow: hidden;
+  &--about {
+    background: #070709;
+  }
 }
 .mask {
   position: absolute;

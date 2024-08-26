@@ -1,0 +1,127 @@
+.about-page-first {
+  background: url('./img/about-first.jpg') no-repeat;
+  padding: 420px 0 0px;
+  background-size: cover;
+  background-position: 65%;
+  min-height: 1550px;
+  position: relative;
+  z-index: 1000;
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 992px) {
+    background-position: right;
+  }
+  h2 {
+    font-size: calc(26px + (64 - 26) * ((100vw - 320px) / (1920 - 320)));
+    margin-bottom: 50px;
+    line-height: 1;
+  }
+  p {
+    font-size: 1.8rem;
+    max-width: 550px;
+  }
+}
+.about-page-second {
+  // background: url('./img/about-second.jpg') no-repeat;
+  // padding: 0px;
+  // background-size: cover;
+  // background-position: 65%;
+  // min-height: 950px;
+  // position: relative;
+  // z-index: 1000;
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 992px) {
+    // background-position: right;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 50px;
+    @media (min-width: 992px) {
+      flex-direction: row;
+      gap: 100px;
+    }
+    h5 {
+      background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #4154ff 50%,
+        #4154ff 100%
+      );
+      color: transparent;
+      background-clip: text;
+      line-height: 1;
+      font-family: $nunito;
+      font-size: calc(100px + (256 - 100) * ((100vw - 320px) / (1920 - 320)));
+    }
+    p {
+      font-size: calc(26px + (36 - 26) * ((100vw - 320px) / (1920 - 320)));
+      line-height: 1;
+      // display: none;
+      // &.active {
+      //   display: block;
+      // }
+    }
+  }
+}
+.line-wrap {
+  position: relative;
+  height: 300vh;
+  margin-top: -300px;
+  z-index: 1000;
+}
+.line-inside {
+  position: sticky;
+  top: 200px;
+}
+.line {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.svg-container {
+  svg {
+    margin: 50px 0;
+  }
+}
+#the-line {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.4);
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 1px;
+}
+#green-line {
+  fill: none;
+  stroke: rgba(255, 255, 255, 1);
+  stroke-width: 1px;
+}
+
+.years {
+  max-width: 1220px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 30px auto 0;
+  padding: 0 20px;
+  align-items: center;
+  gap: 10px;
+  @media (min-width: 992px) {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+.years div {
+  color: #fff;
+  opacity: 0.2;
+  font-size: 2.1rem;
+  cursor: pointer;
+  &.active {
+    opacity: 1;
+  }
+}

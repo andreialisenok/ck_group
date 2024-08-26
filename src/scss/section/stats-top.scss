@@ -3,6 +3,7 @@
   background: $blue;
   position: relative;
   z-index: 1000;
+  overflow: hidden;
   ul {
     display: flex;
     flex-direction: column;

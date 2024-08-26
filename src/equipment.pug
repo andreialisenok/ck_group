@@ -1,0 +1,217 @@
+doctype html
+html
+head
+    title="ЦК ГРУПП"
+    meta(charset='utf-8')
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(name='description', content="")
+    meta(name='keywords', content="")
+    meta(name="author", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover")
+    link(rel="icon" type="image/x-icon" href="./favicon.ico")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.1.1/build/css/intlTelInput.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css")
+    link(rel="stylesheet", href="./main.css")
+body
+    .wrap
+        header.header
+            .container
+                .header__row
+                    a(href="/build").logo
+                        img(src="./img/logo.png", alt="ЦК ГРУПП")
+                    ul.menu
+                        //- li.menu__item
+                        //-     a(href='#').menu__link Услуги
+                        li.menu__item
+                            a(href='calc.html').menu__link Калькулятор
+                        li.menu__item
+                            a(href='equipment.html').menu__link Оборудование
+                        li.menu__item
+                            a(href='about.html').menu__link О нас
+                        li.menu__item
+                            button(type='button').btn.application Оставить заявку
+                    button(type='button').btn.header__btn.application Оставить заявку
+                    button(type='button').burger
+                        span
+                        span
+                        span
+        main.main
+            section.equipment-page
+                .mask
+                .container
+                    .equipment-page__row
+                        h2 Лучшее оборудование по своим характеристикам и окупаемости
+                    .equipment-page__box
+                        img(src="./img/equipment.png", alt="")
+                        .equipment-page__content
+                            h3 Bitmain Antminer T21 190 TH/s
+                            .btns
+                                button(type="button").active 120 TX
+                                button(type="button") 122 TX
+                                button(type="button") 124 TX
+                            .equipment-page__info.active
+                                .equipment-page__top
+                                    p
+                                        span Потребление, Вт/ч — 3610
+                                        span Хешрейт — 190 TH/s
+                                    p
+                                        span Добываемые монеты — BTC
+                                        span Алгоритм — SHA-256
+                                h5 Расчет прибыли
+                                .equipment-page__middle
+                                    p
+                                        span Расход э/э за день
+                                        span 2842,56
+                                    p
+                                        span Доход в день
+                                        span 2866,79 $
+                                    p
+                                        span Прибыль в день
+                                        span 24,23 $
+                                    p
+                                        span Прибыль в день
+                                        span 24,23 $
+                                .equipment-page__bottom
+                                    p
+                                        span 1070000 $
+                                        button.btn.btn--cost.buy(type='button') Заказать
+                            .equipment-page__info
+                                .equipment-page__top
+                                    p
+                                        span Потребление, Вт/ч — 3610
+                                        span Хешрейт — 190 TH/s
+                                    p
+                                        span Добываемые монеты — BTC
+                                        span Алгоритм — SHA-256
+                                h5 Расчет прибыли
+                                .equipment-page__middle
+                                    p
+                                        span Расход э/э за день
+                                        span 2842,56
+                                    p
+                                        span Доход в день
+                                        span 2866,79 $
+                                    p
+                                        span Прибыль в день
+                                        span 24,23 $
+                                    p
+                                        span Прибыль в день
+                                        span 24,23 $
+                                .equipment-page__bottom
+                                    p
+                                        span 2070000 $
+                                        button.btn.btn--cost.buy(type='button') Заказать
+                            .equipment-page__info
+                                .equipment-page__top
+                                    p
+                                        span Потребление, Вт/ч — 3610
+                                        span Хешрейт — 190 TH/s
+                                    p
+                                        span Добываемые монеты — BTC
+                                        span Алгоритм — SHA-256
+                                h5 Расчет прибыли
+                                .equipment-page__middle
+                                    p
+                                        span Расход э/э за день
+                                        span 2842,56
+                                    p
+                                        span Доход в день
+                                        span 2866,79 $
+                                    p
+                                        span Прибыль в день
+                                        span 24,23 $
+                                    p
+                                        span Прибыль в день
+                                        span 24,23 $
+                                .equipment-page__bottom
+                                    p
+                                        span 3070000 $
+                                        button.btn.btn--cost.buy(type='button') Заказать
+            section.equipment-page-services-calc
+                .mask
+                .container
+                    .equipment-page-services-calc__row
+                        p Вы пожете ознакомиться с полным 
+                            a(href="#") перечнем 
+                            | оборудования
+                        h2 Рассчитайте стоимость в нашем калькуляторе
+                        button.btn.btn--cost(type='button') Рассчитать стоимость
+            section.equipment-page-services
+                .mask
+                .container
+                    .equipment-page-services__row
+                        h2 Размещение на наших ЦОД
+                        p Мы обеспечиваем полный цикл услуг: подбор, закупка и размещение, за вами только инвестиции
+                        button.btn(type='button') Оставить заявку
+            section.equipment-page-form
+                .mask
+                .container
+                    .equipment-page-form__row
+                        h3 Приглашаем к сотрудничеству
+                        p Давно хотели стать частью криптомира?Мы станем вашим надежным партнером
+                        ul.form
+                            li.form__item
+                                span.form__title Ваше имя
+                                input(type='text' name placeholder='Имя')
+                            li.form__item
+                                span.form__title Телефон
+                                input.phone(type='tel' name placeholder)
+                            li.form__item
+                                span.form__title  Электронная почта
+                                input(type='email' name placeholder='youmail@gmail.com')
+                            li.form__item
+                                button.btn.application(type='button') Оставить заявку
+        footer.footer
+            .container
+                .footer__row
+                    a(href="/build").logo
+                        img(src="./img/logo.png", alt="ЦК ГРУПП")
+                    p Цифра Капитал Групп
+                    ul
+                        li
+                            //- a(href='#') Услуги
+                        li
+                            a(href='calc.html') Калькулятор
+                        li
+                            a(href='equipment.html') Оборудование
+                        li
+                            a(href='about.html') О нас
+                    .contacts
+                        a(href="tel:+7 (916) 954 67 19") +7 (916) 954 67 19
+                        a(href="mailto:cifracapital@cifracapitalgroup.ru") cifracapital@cifracapitalgroup.ru
+                        div
+                            a(href="http://", target="_blank", rel="noopener noreferrer")
+                                img(src="./img/social/tg.svg", alt="")
+                            a(href="http://", target="_blank", rel="noopener noreferrer")
+                                img(src="./img/social/whatsapp.svg", alt="")
+        .modal
+            .modal__form
+                h2 Заказать продукт
+                button(type="button").modal__close
+                    img(src="./img/close.svg", alt="")
+                .modal__item
+                    span.form__title Ваше имя
+                    input(type="text", name="" placeholder="Имя")
+                .modal__item
+                    span.form__title Телефон
+                    input(type="tel", name="" placeholder="").phone
+                .modal__item
+                    span.form__title  Продукт
+                    input(type="text", name="" placeholder="Bitmain Antminer T21 190 TH/s")
+                .modal__item
+                    span.form__title  Цена
+                    input(type="text", name="" placeholder="545 000 ₽")
+                .modal__item
+                    .counter
+                        button(type="button") -
+                        input(type="text", name="" value="1")
+                        button(type="button") +
+                    button(type="button").btn Отправить
+                p Продолжая, вы соглашаетесь с политикой конфиденциальности
+    script(src='https://cdn.jsdelivr.net/npm/intl-tel-input@24.1.1/build/js/intlTelInput.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js')
+    script(src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js')
+    script(src='https://unpkg.com/gsap@3/dist/gsap.min.js')
+    script(src='https://assets.codepen.io/16327/DrawSVGPlugin3.min.js')
+    script(src='./equipment.js')

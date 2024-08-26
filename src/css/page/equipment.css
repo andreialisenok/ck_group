@@ -1,0 +1,12 @@
+.equipment {
+  background: url("./img/calc-page-bg.jpg") no-repeat;
+  padding: 175px 0 110px;
+  background-size: cover;
+  min-height: 1800px;
+}
+.equipment h2 {
+  font-size: calc(26px + 38 * (100vw - 320px) / 1600);
+  margin-bottom: 60px;
+  text-align: center;
+  line-height: 1;
+}

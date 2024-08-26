@@ -1,0 +1,285 @@
+.equipment-page {
+  background: url('./img/calc-page-bg.jpg') no-repeat;
+  padding: 260px 0 0px;
+  background-size: cover;
+  background-position: 65%;
+  min-height: 1200px;
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 992px) {
+    background-position: right;
+  }
+  h2 {
+    font-size: calc(26px + (56 - 26) * ((100vw - 320px) / (1920 - 320)));
+    margin-bottom: 60px;
+    text-align: center;
+    line-height: 1;
+    @media (min-width: 992px) {
+      margin-bottom: 180px;
+    }
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    border-image: linear-gradient(
+        to right,
+        rgba(8, 15, 196, 0.5),
+        rgba(8, 15, 196, 0)
+      )
+      1;
+    border-width: 1px;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    img {
+      margin: 0 auto;
+      max-width: 550px;
+      height: 100%;
+    }
+    @media (min-width: 992px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__content {
+    h3 {
+      font-size: calc(22px + (32 - 22) * ((100vw - 320px) / (1920 - 320)));
+      margin-bottom: 30px;
+    }
+  }
+  .btns {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    button {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: $nunito;
+      font-size: 1.6rem;
+      border: 1px solid #000;
+      border-radius: 28px;
+      background: rgba(217, 217, 217, 0.1);
+      padding: 10px 20px;
+      color: $white;
+      &.active {
+        background: $blue;
+      }
+    }
+  }
+  &__info {
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+    &.active {
+      display: flex;
+    }
+    h5 {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-family: $nunito;
+      font-size: 2.4rem;
+    }
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    p {
+      display: flex;
+      justify-content: space-between;
+    }
+    span {
+      font-family: $nunito;
+      font-size: 1.6rem;
+    }
+  }
+  &__middle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    p {
+      display: flex;
+      justify-content: space-between;
+    }
+    span {
+    }
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    span {
+      font-family: $nunito;
+      font-size: 1.6rem;
+    }
+  }
+}
+.equipment-page-services-calc {
+  background: url('./img/equipment-page-services-calc-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: 65%;
+  padding: 50px 0 0px;
+  position: relative;
+  z-index: 1000;
+  min-height: 1200px;
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 992px) {
+    background-position: right;
+  }
+  &__row {
+    p {
+      text-align: center;
+      margin-bottom: 230px;
+      a {
+        color: $blue;
+      }
+    }
+    h2 {
+      font-size: calc(26px + (56 - 26) * ((100vw - 320px) / (1920 - 320)));
+      line-height: 1;
+      margin-bottom: 40px;
+      max-width: 700px;
+    }
+  }
+}
+.equipment-page-services {
+  background: url('./img/equipment-page-services-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: 65%;
+  padding: 130px 0 0px;
+  position: relative;
+  z-index: 1000;
+  min-height: 1050px;
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 992px) {
+    background-position: right;
+  }
+  &__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  h2 {
+    font-size: calc(26px + (64 - 26) * ((100vw - 320px) / (1920 - 320)));
+    // text-align: center;
+    line-height: 1;
+  }
+  p {
+    font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1920 - 320)));
+    max-width: 850px;
+    line-height: 1;
+    text-align: center;
+  }
+}
+.equipment-page-form {
+  background: url('./img/equipment-page-form.jpg') no-repeat;
+  background-size: cover;
+  background-position: 65%;
+  padding: 70px 0 150px;
+  position: relative;
+  z-index: 1000;
+  min-height: 830px;
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 992px) {
+    background-position: right;
+  }
+  h3 {
+    font-size: calc(26px + (56 - 26) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 400;
+    margin-bottom: 40px;
+    line-height: 1;
+    max-width: 600px;
+    max-width: calc(240px + (600 - 240) * ((100vw - 320px) / (1920 - 320)));
+  }
+  p {
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+    margin-bottom: 60px;
+    max-width: calc(300px + (360 - 300) * ((100vw - 320px) / (1920 - 320)));
+  }
+  &__row {
+    background: url('./img/form1-bg.jpg') no-repeat;
+    background-size: cover;
+    padding: 20px;
+    height: 590px;
+    position: relative;
+    z-index: 1000;
+    background-position: 65%;
+    @media (min-width: 768px) {
+      padding: 40px 60px;
+    }
+    @media (min-width: 992px) {
+      background-position: right;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      @media (min-width: 768px) {
+        gap: 55px 80px;
+        display: grid;
+        align-items: flex-end;
+        grid-template-columns: auto 1fr;
+        grid-template-areas: 'name phone' 'mail btn';
+      }
+      &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        &:nth-child(1) {
+          grid-area: name;
+        }
+        &:nth-child(2) {
+          grid-area: phone;
+        }
+        &:nth-child(3) {
+          grid-area: mail;
+        }
+        &:nth-child(4) {
+          grid-area: btn;
+        }
+
+        input {
+          width: 100%;
+          background: none;
+          border: none;
+          outline: none;
+          color: $white;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          padding: 5px;
+          @media (min-width: 768px) {
+            width: 320px;
+          }
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.2);
+          }
+          &:active,
+          &:focus {
+            border-bottom: 1px solid $white;
+          }
+        }
+      }
+      &__title {
+        font-size: calc(16px + (16 - 16) * ((100vw - 320px) / (1920 - 320)));
+      }
+      .iti__dropdown-content {
+        background: #171f8b;
+      }
+      .iti__country-list {
+        scrollbar-width: none;
+      }
+    }
+  }
+}
