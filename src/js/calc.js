@@ -78,11 +78,11 @@ async function calculateMiningProfitabilityUsd(hashrateThs, powerConsumptionWatt
   const dailyBtcEarned = (hashrateThs / networkHashrateThs) * blocksPerDay * btcPerBlock;
   const dailyRevenueUsd = dailyBtcEarned * btcPriceUsd;
   const dailyPowerCostUsd = (powerConsumptionWatt / 1000) * 24 * electricityCostUsdPerKwh;
-  const dailyPoolFeeUsd = dailyRevenueUsd * (poolFeePercent / 100);
+  const dailyPoolFeeUsd = (dailyRevenueUsd * (poolFeePercent / 100));
   const dailyProfitUsd = dailyRevenueUsd - dailyPowerCostUsd - dailyPoolFeeUsd;
 
   return {
-    income: dailyRevenueUsd,
+    income: dailyRevenueUsd - dailyPoolFeeUsd,
     outgo: dailyPowerCostUsd,
     profit: dailyProfitUsd
   }
