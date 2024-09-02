@@ -47,33 +47,29 @@
                 </select>
               </div>
               <div class="calc-page__item">
-                <label for="electricityCost">Стоимость электричества (1 к-ват)</label>
-                <input id="electricityCost" type="number" min="0.01" value="0.01">
+                <label for="electricityCost">Стоимость электричества (RUB/квт)</label>
+                <input id="electricityCost" type="number" min="0.1" value="10">
               </div>
               <div class="calc-page__item">
-                <label for="hashrate">Мощность</label>
-                <input id="hashrate" type="number" value="190" min="1">
+                <label for="hashrate">Мощность (TH/s)</label>
+                <input id="hashrate" type="number" value="200" min="1">
               </div>
               <div class="calc-page__item">
-                <label for="consumption">Потребление</label>
-                <input id="consumption" type="number" min="1" value="1">
+                <label for="consumption">Потребление (вт/час)</label>
+                <input id="consumption" type="number" min="1" value="100">
               </div>
               <div class="calc-page__item">
-                <label for="rateUSD">Курс USD</label>
-                <input id="rateUSD" type="number" min="1" value="1">
+                <label for="rateUSDRUB">Курс USD/RUB</label>
+                <input id="rateUSDRUB" type="number" min="1" value="100" readonly>
               </div>
               <div class="calc-page__item">
-                <label for="rateBTC">Курс BTC</label>
-                <input id="rateBTC" type="number" min="1" value="64187.1">
+                <label for="rateBTC">Курс BTC/USD</label>
+                <input id="rateBTC" type="number" min="1" value="60000" readonly>
               </div>
               <div class="calc-page__item">
-                <label for="commission">Комиссия</label>
+                <label for="commission">Комиссия (%)</label>
                 <input id="commission" type="number" min="0" value="0">
               </div>
-              <input type="hidden" id="dailyIncomeTh_s_usdt">
-              <input id="difficulty" type="hidden" value="86871474313762">
-              <input type="hidden" id="hashrate_s" value="1000000000000">
-              <input id="blockReward" type="hidden" value="3.125">
             </div>
             <div class="result" id="result">
               <div class="result__wrap">
