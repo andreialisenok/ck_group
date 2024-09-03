@@ -12,19 +12,20 @@
   z-index: 1000;
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     position: static;
     background: none;
     transform: translateY(0);
     flex-direction: row;
     padding: 0;
+    gap: 50px;
   }
   &.isOpen {
     transform: translateY(0);
   }
   &__item {
     &:last-child {
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         display: none;
       }
     }

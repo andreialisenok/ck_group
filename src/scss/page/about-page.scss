@@ -36,7 +36,6 @@
   }
   &__row {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     flex-direction: column;
     gap: 50px;
@@ -59,11 +58,14 @@
     }
     p {
       font-size: calc(26px + (36 - 26) * ((100vw - 320px) / (1920 - 320)));
-      line-height: 1;
+      line-height: 1.2;
       // display: none;
       // &.active {
       //   display: block;
       // }
+      @media (min-width: 992px) {
+        padding-top: 30px;
+      }
     }
   }
 }

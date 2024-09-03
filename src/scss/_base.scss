@@ -43,9 +43,12 @@ img {
 .main {
   overflow: hidden;
   position: relative;
+  &--def {
+    overflow: inherit;
+  }
   .el1 {
     display: none;
-    @media (min-width: 768px) {
+    @media (min-width: 1200px) {
       // background-position: right;
       display: block;
       position: absolute;
@@ -66,7 +69,7 @@ img {
   }
   .el2 {
     display: none;
-    @media (min-width: 768px) {
+    @media (min-width: 1200px) {
       // background-position: right;
       display: block;
       position: absolute;
@@ -87,7 +90,7 @@ img {
   }
   .el3 {
     display: none;
-    @media (min-width: 768px) {
+    @media (min-width: 1200px) {
       // background-position: right;
       display: block;
       position: absolute;

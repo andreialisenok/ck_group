@@ -3,7 +3,7 @@
   // background-position: center;
   // background-size: cover;
   padding: 0 0 35px;
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     background: url('./img/bg/calc-bg.png') no-repeat;
     background-position: center;
     background-size: cover;
@@ -16,7 +16,7 @@
     z-index: 1000;
   }
   img {
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       display: none;
     }
     // position: absolute;
@@ -30,7 +30,7 @@
     margin-bottom: 40px;
     line-height: 1;
     font-size: 3.6rem;
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       font-size: 5.6rem;
     }
   }
@@ -38,7 +38,7 @@
     font-size: 1.6rem;
     max-width: 630px;
     margin-bottom: 40px;
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       font-size: 1.8rem;
     }
   }

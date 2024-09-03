@@ -1,18 +1,19 @@
 .services {
   background: url('./img/bg/services-bg.png') no-repeat;
+  background-position: center;
   background-size: cover;
   padding: 120px 0 0px;
-  background-position: 35% -100px;
   // min-height: 1050px;
   position: relative;
   // overflow: hidden;
   // z-index: 1000;
   // background-position: 65%;
-  &__row {
-    position: relative;
-    z-index: 1000;
-  }
-  @media (min-width: 768px) {
+  // &__row {
+  //   position: relative;
+  //   z-index: 1000;
+  // }
+  @media (min-width: 992px) {
+    background-size: cover;
     padding: 630px 0 0px;
     margin-top: -360px;
     background-position: center;
@@ -28,7 +29,7 @@
     span {
       padding-left: 40px;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       font-size: 5.6rem;
       margin-bottom: 90px;
     }
@@ -45,7 +46,7 @@
       color: $white;
       font-size: 1.6rem;
       max-width: 500px;
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         font-size: 1.8rem;
       }
     }

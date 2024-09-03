@@ -94,20 +94,20 @@ body
                                     button(onclick="calcResult()").calResult Рассчитать
                                     #monthProfit Прибыль в месяц:
                         .calc-page__wrap
-                            .mask
+                            //- .mask
                             h3 Погрузитесь в мир майнинга с нами!
                             p Давно хотели стать частью криптомира? Мы станем вашим надежным партнером
-                            ul.form
-                                li.form__item
+                            form(action="", method="post").form
+                                .form__item
                                     span.form__title Ваше имя
                                     input(type='text' name placeholder='Имя')
-                                li.form__item
+                                .form__item
                                     span.form__title Телефон
                                     input.phone(type='tel' name placeholder)
-                                li.form__item
+                                .form__item
                                     span.form__title  Электронная почта
                                     input(type='email' name placeholder='youmail@gmail.com')
-                                li.form__item
+                                .form__item
                                     button.btn.application(type='button') Оставить заявку
         footer.footer
             .container
@@ -116,8 +116,6 @@ body
                         img(src="./img/logo.png", alt="ЦК ГРУПП")
                     p Цифра Капитал Групп
                     ul
-                        li
-                            //- a(href='#') Услуги
                         li
                             a(href='calc.html') Калькулятор
                         li

@@ -4,9 +4,7 @@
   background-size: cover;
   padding: 440px 0 0px;
   min-height: 850px;
-  // position: relative;
-  // z-index: 1000;
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     padding: 230px 0 0px;
     background: url('./img/bg/hero-bg.jpg') no-repeat;
     background-position: center;
@@ -16,7 +14,7 @@
   &__row {
     h1 {
       font-size: 36px;
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         font-size: 64px;
       }
       line-height: 1;
@@ -26,7 +24,7 @@
     }
     p {
       font-size: 16px;
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         font-size: 18px;
       }
       margin-bottom: 25px;

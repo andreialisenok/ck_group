@@ -1,7 +1,7 @@
 .footer {
   background: $blue;
   padding: 30px 0;
-  overflow: hidden;
+  // overflow: hidden;
   @media (min-width: 992px) {
     padding: 50px 0;
   }
@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       grid-template-areas:
         'logo text contacts'
         'menu menu contacts';
@@ -33,20 +33,20 @@
   }
   p {
     grid-area: text;
-    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
+    font-size: 2.4rem;
   }
   ul {
     display: flex;
     justify-content: center;
     grid-area: menu;
     gap: 5px;
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       justify-content: flex-start;
       gap: 20px;
     }
     li {
       a {
-        font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+        font-size: 1.6rem;
         font-family: $nunito;
         color: $white;
       }
@@ -58,7 +58,7 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    @media (min-width: 768px) {
+    @media (min-width: 9928px) {
       align-items: flex-end;
     }
     a {

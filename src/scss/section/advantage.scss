@@ -7,7 +7,7 @@
   // z-index: 1000;
   // min-height: 1000px;
   // position: relative;
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     padding: 180px 0 70px;
   }
   &__row {
@@ -19,7 +19,7 @@
     font-weight: 400;
     margin-bottom: 60px;
     line-height: 1;
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       font-size: 5.6rem;
       text-align: center;
     }

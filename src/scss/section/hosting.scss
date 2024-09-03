@@ -1,18 +1,37 @@
 .hosting {
   background: url('./img/bg/hosting-bg.png') no-repeat;
-  background-size: 170%;
+  // background-size: 170%;
+  background-size: cover;
+  background-position: center;
   padding: 50px 0 0 0;
-  background-position: right 20%;
-  @media (min-width: 768px) {
-    background-size: cover;
-    padding: 200px 0 0px;
-    background-position: center;
-    margin-top: -170px;
+  // background-position: right 20%;
+  position: relative;
+  @media (min-width: 992px) {
+    background: none;
+    // background-size: cover;
+    padding: 300px 0 0px;
+    // background-position: center;
+    margin-top: -250px;
     min-height: 1920px;
   }
-  &__row {
-    position: relative;
-    z-index: 1000;
+  // &__row {
+  //   position: relative;
+  //   z-index: 1000;
+  // }
+  & > img {
+    display: none;
+
+    @media (min-width: 992px) {
+      display: block;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 100%;
+      position: absolute;
+      height: 1920px;
+      z-index: -100;
+      object-fit: cover;
+    }
   }
   .first-text {
     text-align: center;
@@ -20,8 +39,8 @@
   }
   .first-btn {
     margin: 0 auto 30px;
-    @media (min-width: 768px) {
-      margin: 0 auto 400px;
+    @media (min-width: 992px) {
+      margin: 0 auto 420px;
     }
   }
   .title {
@@ -29,8 +48,8 @@
     flex-direction: column;
     gap: 30px;
     margin-bottom: 50px;
-    @media (min-width: 768px) {
-      margin-bottom: 200px;
+    @media (min-width: 992px) {
+      margin-bottom: 350px;
       align-items: flex-end;
     }
     h2 {
@@ -40,7 +59,7 @@
       font-weight: 400;
       line-height: 1;
       display: flex;
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         font-size: 5.6rem;
         max-width: 430px;
       }
@@ -101,12 +120,13 @@
         background-position: center;
       }
       h5 {
-        font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
         margin-bottom: 20px;
+        font-size: 2.4rem;
+        font-weight: 400;
         line-height: 1;
       }
       p {
-        font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+        font-size: 1.6rem;
       }
     }
   }
