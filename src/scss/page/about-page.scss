@@ -9,7 +9,7 @@
   @media (min-width: 768px) {
   }
   @media (min-width: 992px) {
-    background-position: right;
+    background-position: center;
   }
   h2 {
     font-size: calc(26px + (64 - 26) * ((100vw - 320px) / (1920 - 320)));
@@ -59,12 +59,14 @@
     p {
       font-size: calc(26px + (36 - 26) * ((100vw - 320px) / (1920 - 320)));
       line-height: 1.2;
+      min-height: 300px;
       // display: none;
       // &.active {
       //   display: block;
       // }
       @media (min-width: 992px) {
         padding-top: 30px;
+        min-height: 400px;
       }
     }
   }
@@ -72,12 +74,18 @@
 .line-wrap {
   position: relative;
   height: 300vh;
-  margin-top: -300px;
   z-index: 1000;
+  top: 20px;
+  @media (min-width: 992px) {
+    top: -100px;
+  }
 }
 .line-inside {
   position: sticky;
-  top: 200px;
+  top: 20px;
+  @media (min-width: 992px) {
+    top: 100px;
+  }
 }
 .line {
   position: absolute;
@@ -88,7 +96,10 @@
 }
 .svg-container {
   svg {
-    margin: 50px 0;
+    margin: 20px 0;
+    @media (min-width: 992px) {
+      margin: 50px 0;
+    }
   }
 }
 #the-line {
@@ -106,13 +117,14 @@
 .years {
   max-width: 1220px;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
   margin: 30px auto 0;
   padding: 0 20px;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
   @media (min-width: 992px) {
+    justify-content: space-between;
     flex-direction: row;
     gap: 0;
   }

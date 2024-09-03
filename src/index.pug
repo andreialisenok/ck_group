@@ -145,18 +145,18 @@ body
                         .data__wrap
                             //- .mask
                             h3 Присоединяйтесь и станьте частью мира криптовалюты!
-                            ul.form
-                                li.form__item
+                            form(action="").form
+                                .form__item
                                     span.form__title Ваше имя
                                     input(type='text' name placeholder='Имя')
-                                li.form__item
+                                .form__item
                                     span.form__title Телефон
                                     input.phone(type='tel' name placeholder)
-                                li.form__item
+                                .form__item
                                     span.form__title  Электронная почта
                                     input(type='email' name placeholder='youmail@gmail.com')
-                                li.form__item
-                                    button.btn.application(type='button') Оставить заявку
+                                .form__item
+                                    button.btn.application(type='submit') Оставить заявку
             section.services
                 //- .mask
                 .container
@@ -192,18 +192,15 @@ body
                             li(data-aos='zoom-in-up')
                                 //- .mask
                                 h5 Консультация и анализ потребностей
-                                p
-                                    | обсудим ваши цели и требования, чтобы подобрать оборудование, которое идеально подойдет именно вам
+                                p обсудим ваши цели и требования, чтобы подобрать оборудование, которое идеально подойдет именно вам
                             li(data-aos='zoom-in-up')
                                 //- .mask
                                 h5 Организация закупки
-                                p
-                                    | заключаем сделки с проверенными поставщиками и поставляем оборудование напрямую из Китая
+                                p заключаем сделки с проверенными поставщиками и поставляем оборудование напрямую из Китая
                             li(data-aos='zoom-in-up')
                                 //- .mask
                                 h5 Доставка и логистика
-                                p
-                                    | Обеспечиваем прямую доставку оборудования из Китая на наш склад в России и оперативно транспортируем его на вашу площадку, чтобы вы получали доход как можно быстрее
+                                p Обеспечиваем прямую доставку оборудования из Китая на наш склад в России и оперативно транспортируем его на вашу площадку, чтобы вы получали доход как можно быстрее
                             li(data-aos='zoom-in-up')
                                 //- .mask
                                 h5 Установка и настройка
@@ -348,17 +345,17 @@ body
                             //- .mask
                             h3 Погрузитесь в мир майнинга с нами!
                             p Давно хотели стать частью криптомира? Мы станем вашим надежным партнером
-                            ul.form
-                                li.form__item
+                            form(action="").form
+                                .form__item
                                     span.form__title Ваше имя
                                     input(type='text' name placeholder='Имя')
-                                li.form__item
+                                .form__item
                                     span.form__title Телефон
                                     input.phone(type='tel' name placeholder)
-                                li.form__item
+                                .form__item
                                     span.form__title  Электронная почта
                                     input(type='email' name placeholder='youmail@gmail.com')
-                                li.form__item
+                                .form__item
                                     button.btn.application(type='button') Оставить заявку
         footer.footer
             .container

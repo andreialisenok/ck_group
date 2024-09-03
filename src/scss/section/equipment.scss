@@ -74,34 +74,56 @@
       gap: 30px;
     }
     li {
-      max-width: 595px;
-      width: 100%;
-      height: 284px;
-      padding: 20px;
+      padding: 40px 30px;
+      max-width: 350px;
       position: relative;
       z-index: 1000;
+      height: 480px;
       @media (min-width: 992px) {
-        padding: 50px 300px 50px 50px;
+        max-width: 595px;
+        width: 100%;
+        height: 284px;
+        padding: 50px 280px 50px 50px;
       }
       &:nth-child(1) {
-        background: url('./img/equipment-item.png') no-repeat;
+        background: url('./img/equipment-item-sm.png') no-repeat;
         background-size: cover;
         background-position: center;
+        @media (min-width: 992px) {
+          background: url('./img/equipment-item.png') no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
       }
       &:nth-child(2) {
-        background: url('./img/equipment-item1.png') no-repeat;
+        background: url('./img/equipment-item-sm1.png') no-repeat;
         background-size: cover;
         background-position: center;
+        @media (min-width: 992px) {
+          background: url('./img/equipment-item1.png') no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
       }
       &:nth-child(3) {
-        background: url('./img/equipment-item2.png') no-repeat;
+        background: url('./img/equipment-item-sm2.png') no-repeat;
         background-size: cover;
         background-position: center;
+        @media (min-width: 992px) {
+          background: url('./img/equipment-item2.png') no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
       }
       &:nth-child(4) {
-        background: url('./img/equipment-item3.png') no-repeat;
+        background: url('./img/equipment-item-sm3.png') no-repeat;
         background-size: cover;
         background-position: center;
+        @media (min-width: 992px) {
+          background: url('./img/equipment-item3.png') no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
       }
       h5 {
         font-size: 2.4rem;

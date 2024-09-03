@@ -121,11 +121,10 @@
     position: relative;
     z-index: 1000;
     background-position: 65%;
-    @media (min-width: 768px) {
-      padding: 40px 60px;
-    }
     @media (min-width: 992px) {
-      background-position: right;
+      padding: 40px 60px;
+      background-position: left;
+      height: 590px;
     }
     h3 {
       font-size: calc(26px + (56 - 26) * ((100vw - 320px) / (1920 - 320)));
