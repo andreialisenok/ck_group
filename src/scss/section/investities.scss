@@ -1,14 +1,18 @@
 .investities {
   padding: 50px 0;
-  background: $dark;
-  position: relative;
-  z-index: 1000;
-  overflow: hidden;
+  // background: $dark;
   @media (min-width: 768px) {
-    padding: 120px 0 105px;
+    padding: 120px 0 0px;
+  }
+  &__row {
+    position: relative;
+    z-index: 1000;
   }
   h2 {
-    font-size: calc(26px + (56 - 26) * ((100vw - 320px) / (1920 - 320)));
+    font-size: 3.6rem;
+    @media (min-width: 768px) {
+      font-size: 5.6rem;
+    }
     font-weight: 400;
     margin-bottom: 70px;
     text-align: center;
@@ -49,7 +53,7 @@
         justify-content: space-between;
         margin-bottom: 60px;
         p {
-          font-size: calc(28px + (32 - 28) * ((100vw - 320px) / (1920 - 320)));
+          font-size: 3.2rem;
           background: linear-gradient(135deg, #4154ff 0%, #ffffff 100%);
           color: transparent;
           background-clip: text;
@@ -62,12 +66,15 @@
         }
       }
       h3 {
-        font-size: calc(20px + (22 - 20) * ((100vw - 320px) / (1920 - 320)));
+        font-size: 2.2rem;
         margin-bottom: 3rem;
         font-weight: 400;
       }
       p {
-        font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+        font-size: 1.6rem;
+        @media (min-width: 768px) {
+          font-size: 1.8rem;
+        }
         color: rgba(255, 255, 255, 0.68);
       }
     }

@@ -1,19 +1,20 @@
 .progress {
-  background: url('./img/progress-bg.jpg') no-repeat;
-  background-size: cover;
-  background-position: 65%;
-  min-height: 584px;
+  // background: url('./img/progress-bg.jpg') no-repeat;
+  // background-size: cover;
+  // background-position: 65%;
+  // min-height: 584px;
   padding: 30px 0;
-  overflow: hidden;
   @media (min-width: 992px) {
     background-position: right;
-    padding: 70px 0 20px;
+    padding: 100px 0;
   }
   &__row {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    position: relative;
+    z-index: 1000;
     @media (min-width: 1200px) {
       flex-direction: row;
       align-items: flex-end;

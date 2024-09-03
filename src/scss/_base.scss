@@ -1,9 +1,8 @@
 body {
   font-family: $manrope;
-  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
-  line-height: calc(1.2em + (1.2 - 1.2) * ((100vw - 320px) / (1920 - 320)));
+  font-size: 1.4rem;
+  line-height: 1.2;
   font-weight: 400;
-
   color: $white;
   background: $dark;
 }
@@ -40,4 +39,71 @@ img {
 }
 .isLock {
   overflow: hidden;
+}
+.main {
+  overflow: hidden;
+  position: relative;
+  .el1 {
+    display: none;
+    @media (min-width: 768px) {
+      // background-position: right;
+      display: block;
+      position: absolute;
+      top: 2200px;
+      left: -1830px;
+      content: '';
+      width: 3385px;
+      height: 2200px;
+      filter: blur(200px);
+      background: radial-gradient(
+        circle,
+        rgba(19, 28, 255, 1) 0%,
+        rgba(19, 28, 255, 0) 50%
+      );
+      opacity: 0.7;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .el2 {
+    display: none;
+    @media (min-width: 768px) {
+      // background-position: right;
+      display: block;
+      position: absolute;
+      top: 3750px;
+      right: -1150px;
+      content: '';
+      width: 2648px;
+      height: 2634px;
+      filter: blur(200px);
+      background: radial-gradient(
+        circle,
+        rgba(19, 28, 255, 1) 0%,
+        rgba(19, 28, 255, 0) 50%
+      );
+      opacity: 0.5;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .el3 {
+    display: none;
+    @media (min-width: 768px) {
+      // background-position: right;
+      display: block;
+      position: absolute;
+      bottom: 265px;
+      left: -1385px;
+      content: '';
+      width: 3040px;
+      height: 1895px;
+      filter: blur(200px);
+      background: radial-gradient(
+        circle,
+        rgba(19, 28, 255, 1) 0%,
+        rgba(19, 28, 255, 0) 50%
+      );
+      opacity: 0.5;
+      transform: translate3d(0, 0, 0);
+    }
+  }
 }

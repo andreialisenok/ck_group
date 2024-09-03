@@ -1,29 +1,45 @@
 .calc {
-  background: url('./img/calc-bg.jpg') no-repeat;
-  background-size: cover;
-  background-position: 65%;
-  padding: 100px 0;
-  position: relative;
-  z-index: 1000;
-  min-height: 960px;
-  overflow: hidden;
-  @media (min-width: 992px) {
-    padding: 200px 0;
-    background-position: right;
+  // background: url('./img/bg/calc-sm-bg.png') no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  padding: 0 0 35px;
+  @media (min-width: 768px) {
+    background: url('./img/bg/calc-bg.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 400px 0 250px;
+    margin-top: -150px;
+    min-height: 994px;
   }
-  @media (min-width: 1200px) {
-    padding: 300px 0 200px;
+  &__row {
+    position: relative;
+    z-index: 1000;
+  }
+  img {
+    @media (min-width: 768px) {
+      display: none;
+    }
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+    // top: 0;
   }
   h2 {
-    font-size: calc(26px + (56 - 26) * ((100vw - 320px) / (1920 - 320)));
-    max-width: calc(240px + (700 - 240) * ((100vw - 320px) / (1920 - 320)));
+    max-width: 700px;
     font-weight: 400;
     margin-bottom: 40px;
     line-height: 1;
+    font-size: 3.6rem;
+    @media (min-width: 768px) {
+      font-size: 5.6rem;
+    }
   }
   p {
-    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
-    max-width: calc(240px + (630 - 240) * ((100vw - 320px) / (1920 - 320)));
+    font-size: 1.6rem;
+    max-width: 630px;
     margin-bottom: 40px;
+    @media (min-width: 768px) {
+      font-size: 1.8rem;
+    }
   }
 }

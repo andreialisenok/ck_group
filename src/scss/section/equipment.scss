@@ -1,36 +1,48 @@
 .equipment {
-  background: url('./img/equipment-bg.jpg') no-repeat;
-  background-size: cover;
-  min-height: 1700px;
-  padding: 100px 0;
-  position: relative;
-  z-index: 1000;
-  background-position: 65%;
-  overflow: hidden;
-  @media (min-width: 992px) {
-    padding: 700px 0 100px;
-    background-position: right;
+  background: url('./img/bg/equipment-bg.png') no-repeat;
+  background-size: 170%;
+  padding: 460px 0 0;
+  margin-top: -100px;
+  background-position: right top;
+  // position: relative;
+  // z-index: 1000;
+  // background-position: 65%;
+  // overflow: hidden;
+  @media (min-width: 768px) {
+    background-size: cover;
+    padding: 1200px 0 0px;
+    background-position: center;
+    margin-top: -960px;
+    min-height: 1920px;
+  }
+  &__row {
+    position: relative;
+    z-index: 1000;
   }
   .title {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-bottom: 30px;
-    align-items: center;
-    @media (min-width: 1200px) {
+    margin-bottom: 60px;
+    @media (min-width: 1300px) {
       margin-bottom: 80px;
       flex-direction: row;
-      justify-content: space-between;
+      gap: 125px;
     }
     h2 {
-      font-size: calc(26px + (56 - 26) * ((100vw - 320px) / (1920 - 320)));
+      font-size: 3.2rem;
       font-weight: 400;
       line-height: 1;
+      max-width: 300px;
+      @media (min-width: 768px) {
+        font-size: 5.6rem;
+        max-width: 500px;
+      }
     }
     p {
       color: $white;
       font-size: 1.8rem;
-      max-width: calc(300px + (480 - 300) * ((100vw - 320px) / (1920 - 320)));
+      max-width: 430px;
     }
   }
   ul {
@@ -75,20 +87,13 @@
         background-position: center;
       }
       h5 {
-        font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
+        font-size: 2.4rem;
         margin-bottom: 20px;
         line-height: 1;
       }
       p {
-        font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+        font-size: 1.6rem;
       }
     }
-  }
-  .text {
-    text-align: center;
-    margin: 50px 0 20px;
-  }
-  .btn {
-    margin: 0 auto;
   }
 }
