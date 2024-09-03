@@ -1615,8 +1615,8 @@ img {
 
 .services {
   background: url("./img/bg/services-bg.png") no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: center -8%;
+  background-size: 730px;
   padding: 120px 0 0px;
   position: relative;
   z-index: 100;
@@ -1639,7 +1639,8 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 3.2rem;
-  margin-bottom: 400px;
+  margin-top: 500px;
+  margin-bottom: 30px;
   font-weight: 400;
   line-height: 1;
 }
@@ -1650,6 +1651,7 @@ img {
   .services h2 {
     font-size: 5.6rem;
     margin-bottom: 90px;
+    margin-top: 0;
   }
 }
 .services .tabs-content {
@@ -1714,9 +1716,9 @@ img {
 .equipment {
   background: url("./img/bg/equipment-bg.png") no-repeat;
   background-size: 100%;
-  padding: 460px 0 0;
+  padding: 400px 0 0;
   margin-top: -100px;
-  background-position: left top;
+  background-position: left 5%;
   position: relative;
   z-index: 80;
 }

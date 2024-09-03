@@ -19,22 +19,34 @@ burger.addEventListener('click', () => {
   burger.classList.toggle('isOpen');
 });
 
-
 AOS.init({
   duration: 1200,
 });
 
 async function calcResult() {
   const rateUSDRUB = document.getElementById('rateUSDRUB').value;
-  const electricityCost = document.getElementById('electricityCost').value / rateUSDRUB;
+  const electricityCost =
+    document.getElementById('electricityCost').value / rateUSDRUB;
   const hashrate = document.getElementById('hashrate').value;
   const consumption = document.getElementById('consumption').value;
   const commission = document.getElementById('commission').value;
-  const currentCurrency = document.querySelector('.currency__btn.active').getAttribute('data-rateUSD');
-  const currentCurrencyName = document.querySelector('.currency__btn.active').getAttribute('data-sign');
-  // console.log(hashrate, consumption, commission, electricityCost)
+  const btcPrice = document.getElementById('rateBTC').value;
 
-  let calcData = await calculateMiningProfitabilityUsd(hashrate, consumption, commission, electricityCost);
+  const currentCurrencyType = document
+    .querySelector('.currency__btn.active')
+    .getAttribute('data-type');
+  const currentCurrency = currentCurrencyType == 0 ? 1 : rateUSDRUB;
+  const currentCurrencyName = document
+    .querySelector('.currency__btn.active')
+    .getAttribute('data-sign');
+  console.log(hashrate, consumption, commission, electricityCost);
+  let calcData = await calculateMiningProfitabilityUsd(
+    hashrate,
+    consumption,
+    commission,
+    electricityCost,
+    btcPrice
+  );
   calcData.income = calcData.income * currentCurrency;
   calcData.outgo = calcData.outgo * currentCurrency;
   calcData.profit = calcData.profit * currentCurrency;
@@ -44,28 +56,43 @@ async function calcResult() {
   updateResultTable(calcData);
 }
 
-async function calculateMiningProfitabilityUsd(hashrateThs, powerConsumptionWatt, poolFeePercent, electricityCostUsdPerKwh) {
-  const coinsArray = await fetch('https://api.minerstat.com/v2/coins?list=BTC').then(r => r.json());
+let coinsArray = [];
+let BTCdata = {};
 
-  const BTCdata = coinsArray.find(x => x.coin == 'BTC');
-  const btcPerBlock = BTCdata.reward_block;  // Вознаграждение за блок в BTC
-  const blocksPerDay = 144;  // Среднее количество блоков в день
-  const btcPriceUsd = BTCdata.price;  // Текущая цена BTC в USD
-  document.getElementById('rateBTC').value = btcPriceUsd.toFixed(2);
-  const networkHashratehs = BTCdata.network_hashrate//620355217.981;  // Текущий хешрейт сети в TH/s
+document.addEventListener('DOMContentLoaded', async () => {
+  coinsArray = await fetch('https://api.minerstat.com/v2/coins?list=BTC').then(
+    (r) => r.json()
+  );
+  BTCdata = coinsArray.find((x) => x.coin == 'BTC');
+  document.getElementById('rateBTC').value = BTCdata.price.toFixed(2);
+});
+
+async function calculateMiningProfitabilityUsd(
+  hashrateThs,
+  powerConsumptionWatt,
+  poolFeePercent,
+  electricityCostUsdPerKwh,
+  btcPrice
+) {
+  const btcPerBlock = BTCdata.reward_block; // Вознаграждение за блок в BTC
+  const blocksPerDay = 144; // Среднее количество блоков в день
+  const btcPriceUsd = btcPrice; // Текущая цена BTC в USD
+  const networkHashratehs = BTCdata.network_hashrate; //620355217.981;  // Текущий хешрейт сети в TH/s
   const networkHashrateThs = networkHashratehs / 1e12;
   // Расчеты
-  const dailyBtcEarned = (hashrateThs / networkHashrateThs) * blocksPerDay * btcPerBlock;
+  const dailyBtcEarned =
+    (hashrateThs / networkHashrateThs) * blocksPerDay * btcPerBlock;
   const dailyRevenueUsd = dailyBtcEarned * btcPriceUsd;
-  const dailyPowerCostUsd = (powerConsumptionWatt / 1000) * 24 * electricityCostUsdPerKwh;
-  const dailyPoolFeeUsd = (dailyRevenueUsd * (poolFeePercent / 100));
+  const dailyPowerCostUsd =
+    (powerConsumptionWatt / 1000) * 24 * electricityCostUsdPerKwh;
+  const dailyPoolFeeUsd = dailyRevenueUsd * (poolFeePercent / 100);
   const dailyProfitUsd = dailyRevenueUsd - dailyPowerCostUsd - dailyPoolFeeUsd;
 
   return {
     income: dailyRevenueUsd - dailyPoolFeeUsd,
     outgo: dailyPowerCostUsd,
-    profit: dailyProfitUsd
-  }
+    profit: dailyProfitUsd,
+  };
 }
 
 // calc
@@ -82,27 +109,27 @@ function setEquipment() {
 }
 
 function updateResultTable(data) {
-  document.getElementById(
-    'dayIncome'
-  ).innerHTML = `${(data.income).toFixed(2)} ${data.currencyName}`;
-  document.getElementById(
-    'weekIncome'
-  ).innerHTML = `${(data.income * 7).toFixed(2)} ${data.currencyName}`;
-  document.getElementById(
-    'monthIncome'
-  ).innerHTML = `${(data.income * 30).toFixed(2)} ${data.currencyName}`;
-  document.getElementById(
-    'dayOutGo'
-  ).innerHTML = `${(data.outgo).toFixed(2)} ${data.currencyName}`;
-  document.getElementById(
-    'weekOutGo'
-  ).innerHTML = `${(data.outgo * 7).toFixed(2)} ${data.currencyName}`;
-  document.getElementById(
-    'monthOutGo'
-  ).innerHTML = `${(data.outgo * 30).toFixed(2)} ${data.currencyName}`;
-  document.getElementById(
-    'monthProfit'
-  ).innerHTML = `Прибыль в месяц: ${(data.profit * 30).toFixed(2)} ${data.currencyName}`;
+  document.getElementById('dayIncome').innerHTML = `${data.income.toFixed(2)} ${
+    data.currencyName
+  }`;
+  document.getElementById('weekIncome').innerHTML = `${(
+    data.income * 7
+  ).toFixed(2)} ${data.currencyName}`;
+  document.getElementById('monthIncome').innerHTML = `${(
+    data.income * 30
+  ).toFixed(2)} ${data.currencyName}`;
+  document.getElementById('dayOutGo').innerHTML = `${data.outgo.toFixed(2)} ${
+    data.currencyName
+  }`;
+  document.getElementById('weekOutGo').innerHTML = `${(data.outgo * 7).toFixed(
+    2
+  )} ${data.currencyName}`;
+  document.getElementById('monthOutGo').innerHTML = `${(
+    data.outgo * 30
+  ).toFixed(2)} ${data.currencyName}`;
+  document.getElementById('monthProfit').innerHTML = `Прибыль в месяц: ${(
+    data.profit * 30
+  ).toFixed(2)} ${data.currencyName}`;
 }
 
 // function calcResult() {
