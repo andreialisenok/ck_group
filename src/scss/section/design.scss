@@ -105,57 +105,93 @@
       gap: 30px;
     }
     li {
-      max-width: 595px;
+      max-width: 350px;
+      height: 480px;
       width: 100%;
-      height: 284px;
-      padding: 20px;
+      padding: 40px 30px;
       position: relative;
       z-index: 1000;
       @media (min-width: 992px) {
-        padding: 50px 200px 50px 50px;
+        height: 284px;
+        max-width: 595px;
+        padding: 50px 230px 50px 50px;
       }
       &:nth-child(1) {
-        background: url('./img/design-item.png') no-repeat;
+        background: url('./img/design-item-sm.png') no-repeat;
         background-size: cover;
         background-position: center;
+        @media (min-width: 992px) {
+          background: url('./img/design-item.png') no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
       }
       &:nth-child(2) {
-        background: url('./img/design-item1.png') no-repeat;
+        background: url('./img/design-item-sm1.png') no-repeat;
         background-size: cover;
         background-position: center;
+        @media (min-width: 992px) {
+          background: url('./img/design-item1.png') no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
       }
       &:nth-child(3) {
-        background: url('./img/design-item2.png') no-repeat;
+        background: url('./img/design-item-sm2.png') no-repeat;
         background-size: cover;
         background-position: center;
+        @media (min-width: 992px) {
+          background: url('./img/design-item2.png') no-repeat;
+          background-size: cover;
+          background-position: center;
+          padding: 50px 200px 50px 50px;
+        }
       }
       &:nth-child(4) {
-        background: url('./img/design-item3.png') no-repeat;
+        background: url('./img/design-item-sm3.png') no-repeat;
         background-size: cover;
         background-position: center;
+        @media (min-width: 992px) {
+          background: url('./img/design-item3.png') no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
       }
       &:nth-child(5) {
-        background: url('./img/design-item4.png') no-repeat;
+        background: url('./img/design-item-sm4.png') no-repeat;
         background-size: cover;
         background-position: center;
+        @media (min-width: 992px) {
+          background: url('./img/design-item4.png') no-repeat;
+          background-size: cover;
+          background-position: center;
+          padding: 50px 160px 50px 50px;
+        }
       }
       &:nth-child(6) {
-        background: url('./img/design-item5.png') no-repeat;
+        background: url('./img/design-item-sm5.png') no-repeat;
         background-size: cover;
         background-position: center;
+        @media (min-width: 992px) {
+          background: url('./img/design-item5.png') no-repeat;
+          background-size: cover;
+          background-position: center;
+          padding: 50px 270px 50px 50px;
+        }
       }
       h5 {
         font-size: 2.4rem;
         margin-bottom: 20px;
         line-height: 1;
+        font-weight: 600;
       }
       p {
-        max-width: 280px;
         font-size: 1.6rem;
       }
     }
   }
   .text {
+    font-size: 2.2rem;
     text-align: center;
     margin: 50px 0 20px;
   }

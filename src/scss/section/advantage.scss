@@ -39,23 +39,40 @@
       width: 100%;
       height: 610px;
       padding: 25px 30px;
+      @media (min-width: 992px) {
+      }
       &:nth-child(1) {
-        background: url('./img/advantage-case-bg.jpg') no-repeat;
-
+        background: url('./img/advantage-case-bg-sm.jpg') no-repeat;
         background-size: cover;
         background-position: center;
+
+        @media (min-width: 992px) {
+          background: url('./img/advantage-case-bg.jpg') no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
       }
       &:nth-child(2) {
-        background: url('./img/advantage-case1-bg.jpg') no-repeat;
-
+        background: url('./img/advantage-case1-bg-sm.jpg') no-repeat;
         background-size: cover;
         background-position: center;
+
+        @media (min-width: 992px) {
+          background: url('./img/advantage-case1-bg.jpg') no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
       }
       &:nth-child(3) {
-        background: url('./img/advantage-case2-bg.jpg') no-repeat;
-
+        background: url('./img/advantage-case2-bg-sm.jpg') no-repeat;
         background-size: cover;
         background-position: center;
+
+        @media (min-width: 992px) {
+          background: url('./img/advantage-case2-bg.jpg') no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
       }
       h3 {
         font-size: 3.2rem;

@@ -116,9 +116,10 @@ img {
   right: 0;
   top: 0;
   bottom: 0;
-  background: #000;
-  opacity: 0.5;
+  background: rgba(0, 5, 147, 0.66);
   z-index: -1000;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 @media (min-width: 992px) {
   .mask {
@@ -479,7 +480,7 @@ img {
     -ms-grid-column-span: 1;
   }
 }
-@media (min-width: 9928px) {
+@media (min-width: 992px) {
   .footer .contacts {
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -717,21 +718,21 @@ img {
 .investities ul li {
   max-width: 376px;
   width: 100%;
-  height: 767px;
+  height: 621px;
   padding: 15px 20px;
 }
 .investities ul li:nth-child(1) {
-  background: url("./img/case.png") no-repeat;
+  background: url("./img/case4.png") no-repeat;
   background-size: cover;
   background-position: center;
 }
 .investities ul li:nth-child(2) {
-  background: url("./img/case2.png") no-repeat;
+  background: url("./img/case4.png") no-repeat;
   background-size: cover;
   background-position: center;
 }
 .investities ul li:nth-child(3) {
-  background: url("./img/case3.png") no-repeat;
+  background: url("./img/case4.png") no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -761,13 +762,9 @@ img {
   font-weight: 400;
 }
 .investities ul li p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: rgba(255, 255, 255, 0.68);
-}
-@media (min-width: 992px) {
-  .investities ul li p {
-    font-size: 1.8rem;
-  }
+  line-height: 1.3;
 }
 
 .hero {
@@ -821,7 +818,7 @@ img {
 .stats-top ul {
   display: -ms-grid;
   display: grid;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   gap: 50px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1225,19 +1222,40 @@ img {
   padding: 25px 30px;
 }
 .advantage ul li:nth-child(1) {
-  background: url("./img/advantage-case-bg.jpg") no-repeat;
+  background: url("./img/advantage-case-bg-sm.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media (min-width: 992px) {
+  .advantage ul li:nth-child(1) {
+    background: url("./img/advantage-case-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 .advantage ul li:nth-child(2) {
-  background: url("./img/advantage-case1-bg.jpg") no-repeat;
+  background: url("./img/advantage-case1-bg-sm.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
+@media (min-width: 992px) {
+  .advantage ul li:nth-child(2) {
+    background: url("./img/advantage-case1-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
 .advantage ul li:nth-child(3) {
-  background: url("./img/advantage-case2-bg.jpg") no-repeat;
+  background: url("./img/advantage-case2-bg-sm.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media (min-width: 992px) {
+  .advantage ul li:nth-child(3) {
+    background: url("./img/advantage-case2-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 .advantage ul li h3 {
   font-size: 3.2rem;
@@ -1695,10 +1713,10 @@ img {
 
 .equipment {
   background: url("./img/bg/equipment-bg.png") no-repeat;
-  background-position: left;
-  background-size: cover;
+  background-size: 100%;
   padding: 460px 0 0;
   margin-top: -100px;
+  background-position: left top;
   position: relative;
   z-index: 80;
 }
@@ -1803,7 +1821,7 @@ img {
     max-width: 595px;
     width: 100%;
     height: 284px;
-    padding: 50px 280px 50px 50px;
+    padding: 50px 270px 50px 50px;
   }
 }
 .equipment ul li:nth-child(1) {
@@ -1857,6 +1875,7 @@ img {
 .equipment ul li h5 {
   font-size: 2.4rem;
   margin-bottom: 20px;
+  font-weight: 600;
   line-height: 1;
 }
 .equipment ul li p {
@@ -1897,6 +1916,7 @@ img {
   }
 }
 .hosting .first-text {
+  font-size: 2.2rem;
   text-align: center;
   margin: 0 0 20px;
 }
@@ -1985,68 +2005,82 @@ img {
   }
 }
 .hosting ul li {
-  max-width: 595px;
+  max-width: 350px;
+  height: 480px;
   width: 100%;
-  height: 284px;
-  padding: 20px;
+  padding: 40px 30px;
   position: relative;
   z-index: 1000;
 }
 @media (min-width: 992px) {
   .hosting ul li {
+    height: 284px;
+    max-width: 595px;
     padding: 50px 150px 50px 50px;
   }
 }
 .hosting ul li:nth-child(1) {
-  background: url("./img/hosting-item.png") no-repeat;
+  background: url("./img/hosting-item-sm.png") no-repeat;
   background-size: cover;
-  background-position: right;
+  background-position: center;
 }
 @media (min-width: 992px) {
   .hosting ul li:nth-child(1) {
     padding: 50px 300px 50px 50px;
+    background: url("./img/hosting-item.png") no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
 .hosting ul li:nth-child(2) {
-  background: url("./img/hosting-item1.png") no-repeat;
+  background: url("./img/hosting-item-sm1.png") no-repeat;
   background-size: cover;
-  background-position: right;
+  background-position: center;
 }
 @media (min-width: 992px) {
   .hosting ul li:nth-child(2) {
+    background: url("./img/hosting-item1.png") no-repeat;
+    background-size: cover;
+    background-position: center;
     padding: 50px 200px 50px 50px;
   }
 }
 .hosting ul li:nth-child(3) {
-  background: url("./img/hosting-item2.png") no-repeat;
+  background: url("./img/hosting-item-sm2.png") no-repeat;
   background-size: cover;
-  background-position: right;
+  background-position: center;
 }
 @media (min-width: 992px) {
   .hosting ul li:nth-child(3) {
     padding: 50px 240px 50px 50px;
+    background: url("./img/hosting-item2.png") no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
 .hosting ul li:nth-child(4) {
-  background: url("./img/hosting-item3.png") no-repeat;
+  background: url("./img/hosting-item-sm3.png") no-repeat;
   background-size: cover;
-  background-position: right;
+  background-position: center;
+}
+@media (min-width: 992px) {
+  .hosting ul li:nth-child(4) {
+    background: url("./img/hosting-item3.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 .hosting ul li h5 {
   margin-bottom: 20px;
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1;
 }
 .hosting ul li p {
-  font-size: 1.4rem;
-}
-@media (min-width: 992px) {
-  .hosting ul li p {
-    font-size: 1.6rem;
-  }
+  font-size: 1.6rem;
 }
 .hosting .last-text {
+  font-size: 2.2rem;
   text-align: center;
   margin: 50px 0 20px;
 }
@@ -2148,7 +2182,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   height: 100%;
 }
 @media (min-width: 992px) {
@@ -2317,58 +2351,106 @@ img {
   }
 }
 .design ul li {
-  max-width: 595px;
+  max-width: 350px;
+  height: 480px;
   width: 100%;
-  height: 284px;
-  padding: 20px;
+  padding: 40px 30px;
   position: relative;
   z-index: 1000;
 }
 @media (min-width: 992px) {
   .design ul li {
-    padding: 50px 200px 50px 50px;
+    height: 284px;
+    max-width: 595px;
+    padding: 50px 230px 50px 50px;
   }
 }
 .design ul li:nth-child(1) {
-  background: url("./img/design-item.png") no-repeat;
+  background: url("./img/design-item-sm.png") no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media (min-width: 992px) {
+  .design ul li:nth-child(1) {
+    background: url("./img/design-item.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 .design ul li:nth-child(2) {
-  background: url("./img/design-item1.png") no-repeat;
+  background: url("./img/design-item-sm1.png") no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media (min-width: 992px) {
+  .design ul li:nth-child(2) {
+    background: url("./img/design-item1.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 .design ul li:nth-child(3) {
-  background: url("./img/design-item2.png") no-repeat;
+  background: url("./img/design-item-sm2.png") no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media (min-width: 992px) {
+  .design ul li:nth-child(3) {
+    background: url("./img/design-item2.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 200px 50px 50px;
+  }
 }
 .design ul li:nth-child(4) {
-  background: url("./img/design-item3.png") no-repeat;
+  background: url("./img/design-item-sm3.png") no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media (min-width: 992px) {
+  .design ul li:nth-child(4) {
+    background: url("./img/design-item3.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 .design ul li:nth-child(5) {
-  background: url("./img/design-item4.png") no-repeat;
+  background: url("./img/design-item-sm4.png") no-repeat;
   background-size: cover;
   background-position: center;
 }
+@media (min-width: 992px) {
+  .design ul li:nth-child(5) {
+    background: url("./img/design-item4.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 160px 50px 50px;
+  }
+}
 .design ul li:nth-child(6) {
-  background: url("./img/design-item5.png") no-repeat;
+  background: url("./img/design-item-sm5.png") no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media (min-width: 992px) {
+  .design ul li:nth-child(6) {
+    background: url("./img/design-item5.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 270px 50px 50px;
+  }
 }
 .design ul li h5 {
   font-size: 2.4rem;
   margin-bottom: 20px;
   line-height: 1;
+  font-weight: 600;
 }
 .design ul li p {
-  max-width: 280px;
   font-size: 1.6rem;
 }
 .design .text {
+  font-size: 2.2rem;
   text-align: center;
   margin: 50px 0 20px;
 }
@@ -2383,10 +2465,16 @@ img {
   min-height: 1800px;
 }
 .calc-page h2 {
-  font-size: calc(26px + 38 * (100vw - 320px) / 1600);
+  font-size: 4.2rem;
   margin-bottom: 60px;
   text-align: center;
   line-height: 1;
+  font-weight: 400;
+}
+@media (min-width: 992px) {
+  .calc-page h2 {
+    font-size: 6.4rem;
+  }
 }
 .calc-page__form {
   display: -ms-grid;
@@ -2999,6 +3087,7 @@ img {
   margin-bottom: 60px;
   text-align: center;
   line-height: 1;
+  font-weight: 400;
 }
 @media (min-width: 992px) {
   .equipment-page h2 {
@@ -3041,6 +3130,7 @@ img {
 .equipment-page__content h3 {
   font-size: calc(22px + 10 * (100vw - 320px) / 1600);
   margin-bottom: 30px;
+  font-weight: 400;
 }
 .equipment-page .btns {
   display: -webkit-box;
@@ -3089,6 +3179,7 @@ img {
   margin-bottom: 30px;
   font-family: "Nunito", sans-serif;
   font-size: 2.4rem;
+  font-weight: 400;
 }
 .equipment-page__top {
   display: -webkit-box;
@@ -3157,22 +3248,31 @@ img {
 }
 
 .equipment-page-services-calc {
-  background: url("./img/equipment-page-services-calc-bg.jpg") no-repeat;
-  background-size: cover;
-  background-position: 65%;
-  padding: 50px 0 0px;
   position: relative;
-  z-index: 1000;
-  min-height: 1200px;
+  padding: 50px 0 0px;
 }
 @media (min-width: 992px) {
   .equipment-page-services-calc {
-    background-position: right;
+    background: url("./img/bg/calc-bg.png") no-repeat;
+    background-size: cover;
+    background-position: 65%;
+    z-index: 1000;
+    min-height: 994px;
+  }
+}
+@media (min-width: 992px) {
+  .equipment-page-services-calc img {
+    display: none;
   }
 }
 .equipment-page-services-calc__row p {
   text-align: center;
-  margin-bottom: 230px;
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) {
+  .equipment-page-services-calc__row p {
+    margin-bottom: 350px;
+  }
 }
 .equipment-page-services-calc__row p a {
   color: #080FC4;
@@ -3182,6 +3282,7 @@ img {
   line-height: 1;
   margin-bottom: 40px;
   max-width: 700px;
+  font-weight: 400;
 }
 
 .equipment-page-services {
@@ -3217,6 +3318,7 @@ img {
 .equipment-page-services h2 {
   font-size: calc(26px + 38 * (100vw - 320px) / 1600);
   line-height: 1;
+  font-weight: 400;
 }
 .equipment-page-services p {
   font-size: calc(20px + 12 * (100vw - 320px) / 1600);
@@ -3245,6 +3347,8 @@ img {
   line-height: 1;
   max-width: 600px;
   font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1;
 }
 @media (min-width: 992px) {
   .equipment-page-form h3 {
@@ -3252,13 +3356,9 @@ img {
   }
 }
 .equipment-page-form p {
-  font-size: 1.6rem;
+  font-size: calc(14px + 4 * (100vw - 320px) / 1600);
   margin-bottom: 60px;
-}
-@media (min-width: 992px) {
-  .equipment-page-form p {
-    font-size: 1.8rem;
-  }
+  max-width: calc(300px + 60 * (100vw - 320px) / 1600);
 }
 .equipment-page-form__row {
   background: url("./img/form1-bg.jpg") no-repeat;
@@ -3594,13 +3694,21 @@ img {
   }
 }
 .about-page-first h2 {
-  font-size: calc(26px + 38 * (100vw - 320px) / 1600);
   margin-bottom: 50px;
-  line-height: 1;
+  line-height: 1.2;
+  font-weight: 400;
+  max-width: 800px;
+  font-size: 4.2rem;
+}
+@media (min-width: 992px) {
+  .about-page-first h2 {
+    font-size: 6.4rem;
+  }
 }
 .about-page-first p {
   font-size: 1.8rem;
-  max-width: 550px;
+  max-width: 500px;
+  font-size: 1.2;
 }
 
 .about-page-second__row {
