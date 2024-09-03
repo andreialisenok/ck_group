@@ -1604,6 +1604,7 @@ img {
   background-size: cover;
   padding: 120px 0 0px;
   position: relative;
+  z-index: 100;
 }
 @media (min-width: 992px) {
   .services {
