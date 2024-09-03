@@ -126,20 +126,20 @@
           <div class="equipment-page-form__row">
             <h3>Приглашаем к сотрудничеству</h3>
             <p>Давно хотели стать частью криптомира?Мы станем вашим надежным партнером</p>
-            <ul class="form">
-              <li class="form__item"><span class="form__title">Ваше имя</span>
+            <form class="form" action="">
+              <div class="form__item"><span class="form__title">Ваше имя</span>
                 <input type="text" name placeholder="Имя">
-              </li>
-              <li class="form__item"><span class="form__title">Телефон</span>
+              </div>
+              <div class="form__item"><span class="form__title">Телефон</span>
                 <input class="phone" type="tel" name placeholder>
-              </li>
-              <li class="form__item"><span class="form__title"> Электронная почта</span>
+              </div>
+              <div class="form__item"><span class="form__title"> Электронная почта</span>
                 <input type="email" name placeholder="youmail@gmail.com">
-              </li>
-              <li class="form__item">
-                <button class="btn application" type="button">Оставить заявку</button>
-              </li>
-            </ul>
+              </div>
+              <div class="form__item">
+                <button class="btn application" type="submit">Оставить заявку</button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -160,7 +160,7 @@
       </div>
     </footer>
     <div class="modal">
-      <div class="modal__form">
+      <form class="modal__form">
         <h2>Заказать продукт</h2>
         <button class="modal__close" type="button"><img src="./img/close.svg" alt=""></button>
         <div class="modal__item"><span class="form__title">Ваше имя</span>
@@ -181,10 +181,10 @@
             <input type="text" name="" value="1">
             <button type="button">+</button>
           </div>
-          <button class="btn" type="button">Отправить</button>
+          <button class="btn" type="submit">Отправить</button>
         </div>
         <p>Продолжая, вы соглашаетесь с политикой конфиденциальности</p>
-      </div>
+      </form>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.1.1/build/js/intlTelInput.min.js"></script>

@@ -30,27 +30,6 @@ burger.addEventListener('click', () => {
   burger.classList.toggle('isOpen');
 });
 
-const tabBtns = document.querySelectorAll('.services .tabs button');
-const tabContent = document.querySelectorAll('.services .tabs-content');
-
-tabBtns.forEach((tab, tabIndex) => {
-  tab.addEventListener('click', () => {
-    tabBtns.forEach((tab) => {
-      tab.classList.remove('active');
-    });
-    tab.classList.add('active');
-
-    // tab.classList.add('active');
-
-    tabContent.forEach((tabContent, tabContentIndex) => {
-      tabContent.classList.remove('active');
-      if (tabIndex === tabContentIndex) {
-        tabContent.classList.add('active');
-      }
-    });
-  });
-});
-
 const equipmentTabs = document.querySelectorAll('.equipment-page .btns button');
 const equipmentTabsContent = document.querySelectorAll(
   '.equipment-page .equipment-page__info'

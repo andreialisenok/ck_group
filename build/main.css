@@ -1671,9 +1671,12 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 20px;
 }
-.services .tabs button {
+.services .tabs a {
   background: none;
   cursor: pointer;
   border: none;
@@ -1683,7 +1686,10 @@ img {
   font-weight: 400;
   text-align: left;
 }
-.services .tabs button.active {
+.services .tabs a:hover {
+  color: #fff;
+}
+.services .tabs a.active {
   color: #fff;
 }
 
@@ -1694,6 +1700,7 @@ img {
   padding: 460px 0 0;
   margin-top: -100px;
   position: relative;
+  z-index: 80;
 }
 @media (min-width: 992px) {
   .equipment {
@@ -1862,6 +1869,7 @@ img {
   background-position: center;
   padding: 50px 0 0 0;
   position: relative;
+  z-index: 60;
 }
 @media (min-width: 992px) {
   .hosting {
@@ -1986,28 +1994,43 @@ img {
 }
 @media (min-width: 992px) {
   .hosting ul li {
-    padding: 50px 100px 50px 50px;
+    padding: 50px 150px 50px 50px;
   }
 }
 .hosting ul li:nth-child(1) {
   background: url("./img/hosting-item.png") no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: right;
+}
+@media (min-width: 992px) {
+  .hosting ul li:nth-child(1) {
+    padding: 50px 300px 50px 50px;
+  }
 }
 .hosting ul li:nth-child(2) {
   background: url("./img/hosting-item1.png") no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: right;
+}
+@media (min-width: 992px) {
+  .hosting ul li:nth-child(2) {
+    padding: 50px 200px 50px 50px;
+  }
 }
 .hosting ul li:nth-child(3) {
   background: url("./img/hosting-item2.png") no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: right;
+}
+@media (min-width: 992px) {
+  .hosting ul li:nth-child(3) {
+    padding: 50px 240px 50px 50px;
+  }
 }
 .hosting ul li:nth-child(4) {
   background: url("./img/hosting-item3.png") no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: right;
 }
 .hosting ul li h5 {
   margin-bottom: 20px;
@@ -2016,7 +2039,12 @@ img {
   line-height: 1;
 }
 .hosting ul li p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+@media (min-width: 992px) {
+  .hosting ul li p {
+    font-size: 1.6rem;
+  }
 }
 .hosting .last-text {
   text-align: center;

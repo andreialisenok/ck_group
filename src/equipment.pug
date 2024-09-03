@@ -147,18 +147,18 @@ body
                     .equipment-page-form__row
                         h3 Приглашаем к сотрудничеству
                         p Давно хотели стать частью криптомира?Мы станем вашим надежным партнером
-                        ul.form
-                            li.form__item
+                        form(action="").form
+                            .form__item
                                 span.form__title Ваше имя
                                 input(type='text' name placeholder='Имя')
-                            li.form__item
+                            .form__item
                                 span.form__title Телефон
                                 input.phone(type='tel' name placeholder)
-                            li.form__item
+                            .form__item
                                 span.form__title  Электронная почта
                                 input(type='email' name placeholder='youmail@gmail.com')
-                            li.form__item
-                                button.btn.application(type='button') Оставить заявку
+                            .form__item
+                                button.btn.application(type='submit') Оставить заявку
         footer.footer
             .container
                 .footer__row
@@ -181,7 +181,7 @@ body
                             a(href="http://", target="_blank", rel="noopener noreferrer")
                                 img(src="./img/social/whatsapp.svg", alt="")
         .modal
-            .modal__form
+            form.modal__form
                 h2 Заказать продукт
                 button(type="button").modal__close
                     img(src="./img/close.svg", alt="")
@@ -202,7 +202,7 @@ body
                         button(type="button") -
                         input(type="text", name="" value="1")
                         button(type="button") +
-                    button(type="button").btn Отправить
+                    button(type="submit").btn Отправить
                 p Продолжая, вы соглашаетесь с политикой конфиденциальности
     script(src='https://cdn.jsdelivr.net/npm/intl-tel-input@24.1.1/build/js/intlTelInput.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js')

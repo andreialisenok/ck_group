@@ -27,49 +27,26 @@ burger.addEventListener('click', () => {
   burger.classList.toggle('isOpen');
 });
 
-const tabBtns = document.querySelectorAll('.services .tabs button');
-const tabContent = document.querySelectorAll('.services .tabs-content');
+// const tabBtns = document.querySelectorAll('.services .tabs button');
+// const tabContent = document.querySelectorAll('.services .tabs-content');
 
-tabBtns.forEach((tab, tabIndex) => {
-  tab.addEventListener('click', () => {
-    tabBtns.forEach((tab) => {
-      tab.classList.remove('active');
-    });
-    tab.classList.add('active');
+// tabBtns.forEach((tab, tabIndex) => {
+//   tab.addEventListener('click', () => {
+//     tabBtns.forEach((tab) => {
+//       tab.classList.remove('active');
+//     });
+//     tab.classList.add('active');
 
-    // tab.classList.add('active');
+//     // tab.classList.add('active');
 
-    tabContent.forEach((tabContent, tabContentIndex) => {
-      tabContent.classList.remove('active');
-      if (tabIndex === tabContentIndex) {
-        tabContent.classList.add('active');
-      }
-    });
-  });
-});
-
-const equipmentTabs = document.querySelectorAll('.equipment-page .btns button');
-const equipmentTabsContent = document.querySelectorAll(
-  '.equipment-page .equipment-page__info'
-);
-
-equipmentTabs.forEach((tab, tabIndex) => {
-  tab.addEventListener('click', () => {
-    equipmentTabs.forEach((tab) => {
-      tab.classList.remove('active');
-    });
-    tab.classList.add('active');
-
-    // tab.classList.add('active');
-
-    equipmentTabsContent.forEach((tabContent, tabContentIndex) => {
-      tabContent.classList.remove('active');
-      if (tabIndex === tabContentIndex) {
-        tabContent.classList.add('active');
-      }
-    });
-  });
-});
+//     tabContent.forEach((tabContent, tabContentIndex) => {
+//       tabContent.classList.remove('active');
+//       if (tabIndex === tabContentIndex) {
+//         tabContent.classList.add('active');
+//       }
+//     });
+//   });
+// });
 
 AOS.init({
   duration: 1200,
