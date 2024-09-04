@@ -1033,7 +1033,7 @@ img {
 }
 
 .mining {
-  padding: 30px 0;
+  padding: 80px 0;
   position: relative;
   position: relative;
 }
@@ -1177,7 +1177,7 @@ img {
 }
 
 .advantage {
-  padding: 35px 0;
+  padding: 50px 0;
 }
 @media (min-width: 992px) {
   .advantage {
@@ -2147,7 +2147,7 @@ img {
 }
 
 .progress {
-  padding: 30px 0;
+  padding: 80px 0;
 }
 @media (min-width: 992px) {
   .progress {
