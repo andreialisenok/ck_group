@@ -13,7 +13,7 @@
   @media (min-width: 992px) {
     // background-size: cover;
     background: none;
-    padding: 1200px 0 0px;
+    padding: 1400px 0 0px;
     // background-position: center;
     margin-top: -960px;
     // min-height: 1920px;
@@ -33,10 +33,10 @@
       min-width: 100%;
       left: 0;
       right: 0;
-      top: 0;
+      top: 200px;
       width: 100%;
       position: absolute;
-      height: 1920px;
+      height: 1416px;
       z-index: -100;
       object-fit: cover;
     }

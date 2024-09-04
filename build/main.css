@@ -375,6 +375,9 @@ img {
     padding: 50px 0;
   }
 }
+.footer--about {
+  margin-top: 100px;
+}
 .footer__row {
   display: -ms-grid;
   display: grid;
@@ -1759,7 +1762,7 @@ img {
 @media (min-width: 992px) {
   .equipment {
     background: none;
-    padding: 1200px 0 0px;
+    padding: 1400px 0 0px;
     margin-top: -960px;
   }
 }
@@ -1782,10 +1785,10 @@ img {
     min-width: 100%;
     left: 0;
     right: 0;
-    top: 0;
+    top: 200px;
     width: 100%;
     position: absolute;
-    height: 1920px;
+    height: 1416px;
     z-index: -100;
     -o-object-fit: cover;
        object-fit: cover;
@@ -3181,21 +3184,31 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 10px;
+  padding: 20px 0;
   -o-border-image: linear-gradient(to right, rgb(65, 84, 255), rgb(7, 7, 9)) 1;
      border-image: -webkit-gradient(linear, left top, right top, from(rgb(65, 84, 255)), to(rgb(7, 7, 9))) 1;
      border-image: linear-gradient(to right, rgb(65, 84, 255), rgb(7, 7, 9)) 1;
   border-width: 1px;
   border-style: solid;
   gap: 50px;
+  border-left: none;
+  border-right: none;
+  margin: 0 -20px;
 }
 @media (min-width: 992px) {
   .equipment-page__box {
     padding: 50px;
+    border-left: solid;
+    border-right: solid;
+    border-width: 1px;
   }
+}
+.equipment-page__box img {
+  padding: 0 20px;
 }
 @media (min-width: 992px) {
   .equipment-page__box img {
+    padding: 0;
     width: 50%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -3211,6 +3224,14 @@ img {
         -ms-flex-pack: justify;
             justify-content: space-between;
     gap: 100px;
+  }
+}
+.equipment-page__content {
+  padding: 0 20px;
+}
+@media (min-width: 992px) {
+  .equipment-page__content {
+    padding: 0;
   }
 }
 .equipment-page__content h3 {
@@ -3344,6 +3365,7 @@ img {
   color: #fff;
   font-family: "Nunito", sans-serif;
   font-size: 1.6rem;
+  font-size: 2.5rem;
 }
 
 .equipment-page-services-calc {
@@ -3367,9 +3389,10 @@ img {
 .equipment-page-services-calc__row p {
   position: absolute;
   top: 30px;
-  left: 0;
-  right: 0;
+  left: 20px;
+  right: 20px;
   text-align: center;
+  font-size: 2rem;
 }
 @media (min-width: 992px) {
   .equipment-page-services-calc__row p {
@@ -3378,6 +3401,7 @@ img {
   }
 }
 .equipment-page-services-calc__row p a {
+  text-decoration: underline;
   color: #080FC4;
 }
 .equipment-page-services-calc__row h2 {
@@ -3847,6 +3871,8 @@ img {
   }
 }
 .about-page-second__row h5 {
+  text-align: center;
+  position: relative;
   font-weight: 400;
   background: linear-gradient(135deg, #ffffff 0%, #4154ff 50%, #4154ff 100%);
   color: transparent;
@@ -3855,6 +3881,28 @@ img {
   line-height: 1;
   font-family: "Nunito", sans-serif;
   font-size: calc(100px + 140 * (100vw - 320px) / 1600);
+}
+.about-page-second__row h5::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -300px;
+  height: 500px;
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
+  background: rgb(19, 28, 255) 0%;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  max-width: 100%;
+  width: 100%;
+  left: -50%;
+  z-index: -10000;
+}
+@media (min-width: 992px) {
+  .about-page-second__row h5::before {
+    left: -70%;
+    bottom: -300px;
+  }
 }
 .about-page-second__row div {
   max-width: 500px;
@@ -3915,19 +3963,15 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  gap: 100px;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
 }
 @media (min-width: 992px) {
   .line-inside {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     gap: 80px;
-    top: 50px;
+    top: 120px;
   }
 }
 
@@ -3988,33 +4032,5 @@ img {
 }
 .years div.active {
   opacity: 1;
-}
-
-.el-box {
-  display: block;
-  position: fixed;
-  left: 0;
-  right: 0;
-  width: 100%;
-  overflow: hidden;
-  z-index: -10000;
-  height: 100%;
-  bottom: -500px;
-  top: 0;
-}
-.el-box .el {
-  display: block;
-  position: absolute;
-  bottom: -200px;
-  left: -200px;
-  content: "";
-  width: 1000px;
-  height: 1000px;
-  -webkit-filter: blur(200px);
-          filter: blur(200px);
-  background: radial-gradient(circle, rgb(19, 28, 255) 0%, rgba(19, 28, 255, 0) 70%);
-  opacity: 0.5;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
 }
 /*# sourceMappingURL=main.css.map */

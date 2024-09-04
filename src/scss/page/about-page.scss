@@ -49,6 +49,8 @@
       gap: 200px;
     }
     h5 {
+      text-align: center;
+      position: relative;
       font-weight: 400;
       background: linear-gradient(
         135deg,
@@ -61,6 +63,24 @@
       line-height: 1;
       font-family: $nunito;
       font-size: calc(100px + (240 - 100) * ((100vw - 320px) / (1920 - 320)));
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -300px;
+        height: 500px;
+        filter: blur(200px);
+        background: rgb(19, 28, 255) 0%;
+        transform: translate3d(0, 0, 0);
+        max-width: 100%;
+        width: 100%;
+        left: -50%;
+        z-index: -10000;
+        @media (min-width: 992px) {
+          left: -70%;
+          bottom: -300px;
+        }
+      }
     }
     div {
       max-width: 500px;
@@ -107,12 +127,11 @@
   position: sticky;
   top: 20px;
   display: flex;
-  flex-direction: column-reverse;
-  gap: 100px;
+  flex-direction: column;
+  gap: 20px;
   @media (min-width: 992px) {
-    flex-direction: column;
     gap: 80px;
-    top: 50px;
+    top: 120px;
   }
 }
 .svg-container {
@@ -157,32 +176,32 @@
     opacity: 1;
   }
 }
-.el-box {
-  display: block;
-  position: fixed;
-  left: 0;
-  right: 0;
-  width: 100%;
-  overflow: hidden;
-  z-index: -10000;
-  height: 100%;
-  bottom: -500px;
-  top: 0;
-  .el {
-    display: block;
-    position: absolute;
-    bottom: -200px;
-    left: -200px;
-    content: '';
-    width: 1000px;
-    height: 1000px;
-    filter: blur(200px);
-    background: radial-gradient(
-      circle,
-      rgba(19, 28, 255, 1) 0%,
-      rgba(19, 28, 255, 0) 70%
-    );
-    opacity: 0.5;
-    transform: translate3d(0, 0, 0);
-  }
-}
+// .el-box {
+//   display: block;
+//   position: fixed;
+//   left: 0;
+//   right: 0;
+//   width: 100%;
+//   overflow: hidden;
+//   z-index: -10000;
+//   height: 100%;
+//   bottom: -500px;
+//   top: 0;
+//   .el {
+//     display: block;
+//     position: absolute;
+//     bottom: -200px;
+//     left: -200px;
+//     content: '';
+//     width: 1000px;
+//     height: 1000px;
+//     filter: blur(200px);
+//     background: radial-gradient(
+//       circle,
+//       rgba(19, 28, 255, 1) 0%,
+//       rgba(19, 28, 255, 0) 70%
+//     );
+//     opacity: 0.5;
+//     transform: translate3d(0, 0, 0);
+//   }
+// }

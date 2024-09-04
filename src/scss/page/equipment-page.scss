@@ -20,7 +20,7 @@
   &__box {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 20px 0;
     border-image: linear-gradient(
         to right,
         rgba(65, 84, 255, 1),
@@ -30,11 +30,19 @@
     border-width: 1px;
     border-style: solid;
     gap: 50px;
+    border-left: none;
+    border-right: none;
+    margin: 0 -20px;
     @media (min-width: 992px) {
       padding: 50px;
+      border-left: solid;
+      border-right: solid;
+      border-width: 1px;
     }
     img {
+      padding: 0 20px;
       @media (min-width: 992px) {
+        padding: 0;
         width: 50%;
         object-fit: cover;
       }
@@ -46,6 +54,10 @@
     }
   }
   &__content {
+    padding: 0 20px;
+    @media (min-width: 992px) {
+      padding: 0;
+    }
     h3 {
       font-size: calc(22px + (32 - 22) * ((100vw - 320px) / (1920 - 320)));
       margin-bottom: 30px;
@@ -128,6 +140,7 @@
         color: $white;
         font-family: $nunito;
         font-size: 1.6rem;
+        font-size: 2.5rem;
       }
     }
   }
@@ -151,14 +164,16 @@
     p {
       position: absolute;
       top: 30px;
-      left: 0;
-      right: 0;
+      left: 20px;
+      right: 20px;
       text-align: center;
+      font-size: 2rem;
       @media (min-width: 992px) {
         position: static;
         margin-bottom: 200px;
       }
       a {
+        text-decoration: underline;
         color: $blue;
       }
     }
