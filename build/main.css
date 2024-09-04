@@ -977,11 +977,13 @@ img {
 .stats-bottom p {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 0 auto 30px;
 }
 @media (min-width: 992px) {
   .stats-bottom p {
     font-size: 3.8rem;
+    max-width: 1000px;
+    margin: 0 auto 60px;
   }
 }
 
@@ -1228,6 +1230,11 @@ img {
   width: 100%;
   height: 610px;
   padding: 25px 30px;
+}
+@media (min-width: 992px) {
+  .advantage ul li {
+    max-width: 390px;
+  }
 }
 .advantage ul li:nth-child(1) {
   background: url("./img/advantage-case-bg-sm.png") no-repeat;
@@ -1861,7 +1868,7 @@ img {
     max-width: 595px;
     width: 100%;
     height: 284px;
-    padding: 50px 270px 50px 50px;
+    padding: 30px 275px 30px 30px;
   }
 }
 .equipment ul li:nth-child(1) {
@@ -2061,7 +2068,7 @@ img {
   .hosting ul li {
     height: 284px;
     max-width: 595px;
-    padding: 50px 150px 50px 50px;
+    padding: 30px 150px 30px 30px;
   }
 }
 .hosting ul li:nth-child(1) {
@@ -2071,7 +2078,7 @@ img {
 }
 @media (min-width: 992px) {
   .hosting ul li:nth-child(1) {
-    padding: 50px 300px 50px 50px;
+    padding: 30px 320px 30px 30px;
     background: url("./img/hosting-item.png") no-repeat;
     background-size: cover;
     background-position: center;
@@ -2087,7 +2094,7 @@ img {
     background: url("./img/hosting-item1.png") no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 50px 200px 50px 50px;
+    padding: 30px 250px 30px 30px;
   }
 }
 .hosting ul li:nth-child(3) {
@@ -2097,7 +2104,7 @@ img {
 }
 @media (min-width: 992px) {
   .hosting ul li:nth-child(3) {
-    padding: 50px 240px 50px 50px;
+    padding: 30px 260px 30px 30px;
     background: url("./img/hosting-item2.png") no-repeat;
     background-size: cover;
     background-position: center;
@@ -2113,6 +2120,7 @@ img {
     background: url("./img/hosting-item3.png") no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 30px 175px 30px 30px;
   }
 }
 .hosting ul li h5 {
@@ -2415,7 +2423,7 @@ img {
   .design ul li {
     height: 284px;
     max-width: 595px;
-    padding: 50px 230px 50px 50px;
+    padding: 30px 250px 30px 30px;
   }
 }
 .design ul li:nth-child(1) {
@@ -2428,6 +2436,7 @@ img {
     background: url("./img/design-item.png") no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 30px 250px 30px 30px;
   }
 }
 .design ul li:nth-child(2) {
@@ -2440,6 +2449,7 @@ img {
     background: url("./img/design-item1.png") no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 30px 250px 30px 30px;
   }
 }
 .design ul li:nth-child(3) {
@@ -2452,7 +2462,7 @@ img {
     background: url("./img/design-item2.png") no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 50px 200px 50px 50px;
+    padding: 30px 230px 30px 30px;
   }
 }
 .design ul li:nth-child(4) {
@@ -2465,6 +2475,7 @@ img {
     background: url("./img/design-item3.png") no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 30px 260px 30px 30px;
   }
 }
 .design ul li:nth-child(5) {
@@ -2477,7 +2488,10 @@ img {
     background: url("./img/design-item4.png") no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 50px 160px 50px 50px;
+    padding: 30px 160px 30px 30px;
+  }
+  .design ul li:nth-child(5) p {
+    max-width: 320px;
   }
 }
 .design ul li:nth-child(6) {
@@ -2490,7 +2504,10 @@ img {
     background: url("./img/design-item5.png") no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 50px 270px 50px 50px;
+    padding: 30px 270px 30px 30px;
+  }
+  .design ul li:nth-child(6) p {
+    max-width: 280px;
   }
 }
 .design ul li h5 {
@@ -3339,7 +3356,7 @@ img {
 @media (min-width: 992px) {
   .equipment-page-services-calc__row p {
     position: static;
-    margin-bottom: 350px;
+    margin-bottom: 200px;
   }
 }
 .equipment-page-services-calc__row p a {

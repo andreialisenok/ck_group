@@ -106,14 +106,14 @@
       @media (min-width: 992px) {
         height: 284px;
         max-width: 595px;
-        padding: 50px 150px 50px 50px;
+        padding: 30px 150px 30px 30px;
       }
       &:nth-child(1) {
         background: url('./img/hosting-item-sm.png') no-repeat;
         background-size: cover;
         background-position: center;
         @media (min-width: 992px) {
-          padding: 50px 300px 50px 50px;
+          padding: 30px 320px 30px 30px;
           background: url('./img/hosting-item.png') no-repeat;
           background-size: cover;
           background-position: center;
@@ -127,7 +127,7 @@
           background: url('./img/hosting-item1.png') no-repeat;
           background-size: cover;
           background-position: center;
-          padding: 50px 200px 50px 50px;
+          padding: 30px 250px 30px 30px;
         }
       }
       &:nth-child(3) {
@@ -135,7 +135,7 @@
         background-size: cover;
         background-position: center;
         @media (min-width: 992px) {
-          padding: 50px 240px 50px 50px;
+          padding: 30px 260px 30px 30px;
           background: url('./img/hosting-item2.png') no-repeat;
           background-size: cover;
           background-position: center;
@@ -149,6 +149,7 @@
           background: url('./img/hosting-item3.png') no-repeat;
           background-size: cover;
           background-position: center;
+          padding: 30px 175px 30px 30px;
         }
       }
       h5 {

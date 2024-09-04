@@ -120,7 +120,7 @@
       @media (min-width: 992px) {
         height: 284px;
         max-width: 595px;
-        padding: 50px 230px 50px 50px;
+        padding: 30px 250px 30px 30px;
       }
       &:nth-child(1) {
         background: url('./img/design-item-sm.png') no-repeat;
@@ -130,6 +130,7 @@
           background: url('./img/design-item.png') no-repeat;
           background-size: cover;
           background-position: center;
+          padding: 30px 250px 30px 30px;
         }
       }
       &:nth-child(2) {
@@ -140,6 +141,7 @@
           background: url('./img/design-item1.png') no-repeat;
           background-size: cover;
           background-position: center;
+          padding: 30px 250px 30px 30px;
         }
       }
       &:nth-child(3) {
@@ -150,7 +152,7 @@
           background: url('./img/design-item2.png') no-repeat;
           background-size: cover;
           background-position: center;
-          padding: 50px 200px 50px 50px;
+          padding: 30px 230px 30px 30px;
         }
       }
       &:nth-child(4) {
@@ -161,6 +163,7 @@
           background: url('./img/design-item3.png') no-repeat;
           background-size: cover;
           background-position: center;
+          padding: 30px 260px 30px 30px;
         }
       }
       &:nth-child(5) {
@@ -171,7 +174,10 @@
           background: url('./img/design-item4.png') no-repeat;
           background-size: cover;
           background-position: center;
-          padding: 50px 160px 50px 50px;
+          padding: 30px 160px 30px 30px;
+          p {
+            max-width: 320px;
+          }
         }
       }
       &:nth-child(6) {
@@ -182,7 +188,10 @@
           background: url('./img/design-item5.png') no-repeat;
           background-size: cover;
           background-position: center;
-          padding: 50px 270px 50px 50px;
+          padding: 30px 270px 30px 30px;
+          p {
+            max-width: 280px;
+          }
         }
       }
       h5 {
