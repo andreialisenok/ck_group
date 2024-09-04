@@ -76,7 +76,7 @@ const data = [
   },
   {
     year: 2026,
-    distance: 0.99,
+    distance: 1,
     text: '3й этап. Планируемая мощность ЦОДа "Башкирский" ~ 120 мвт',
     subtext: '',
   },
@@ -104,6 +104,12 @@ window.addEventListener('scroll', function (e) {
   const filteredData = data.filter((x) => x.distance * 100 <= scrollPercentage);
   const currentData = filteredData[filteredData.length - 1];
 
+  // console.log(scrollTop);
+  // console.log(scrollHeight);
+  // console.log(clientHeight);
+  // console.log(scrollPercentage);
+  // console.log(filteredData);
+  // console.log(currentData);
   if (currentData) {
     const index = data.indexOf(currentData);
     $(numsBtns).removeClass('active');
@@ -152,14 +158,16 @@ yearsBtns.forEach((item, idx) => {
     data.forEach((obj, i) => {
       // console.log(idx === i);
       if (idx === i) {
-        document.querySelector('.about-page-second__row p').textContent =
-          obj.text;
-        document.querySelector('.about-page-second__row h5').textContent =
-          obj.year;
-        gsap.to('#green-line', {
-          drawSVG: `${obj.distance * 100}%`,
-          duration: 0.1,
-        });
+        // console.log(obj.distance);
+        // document.querySelector('.about-page-second__row p').textContent =
+        //   obj.text;
+        // document.querySelector('.about-page-second__row h5').textContent =
+        //   obj.year;
+        // gsap.to('#green-line', {
+        //   drawSVG: `${obj.distance * 100}%`,
+        //   duration: 0.1,
+        // });
+        scrollByPercent(obj.distance + 0.09);
       }
     });
   });

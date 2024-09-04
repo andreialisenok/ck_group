@@ -60,11 +60,11 @@
       background-clip: text;
       line-height: 1;
       font-family: $nunito;
-      font-size: calc(100px + (256 - 100) * ((100vw - 320px) / (1920 - 320)));
+      font-size: calc(100px + (240 - 100) * ((100vw - 320px) / (1920 - 320)));
     }
     div {
       max-width: 500px;
-      min-height: 200px;
+      height: 200px;
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -76,10 +76,16 @@
         &:first-child {
           font-size: 1.8rem;
           line-height: 1.2;
+          @media (min-width: 992px) {
+            font-size: 3.6rem;
+          }
         }
         &:last-child {
           font-size: 1.4rem;
           line-height: 1.2;
+          @media (min-width: 992px) {
+            font-size: 3rem;
+          }
         }
       }
     }
@@ -92,7 +98,9 @@
   top: 20px;
   @media (min-width: 992px) {
     height: 500vh;
-    top: -500px;
+    // top: -500px;
+    margin-top: -500px;
+    // bottom: -700px;
   }
 }
 .line-inside {
@@ -103,7 +111,8 @@
   gap: 100px;
   @media (min-width: 992px) {
     flex-direction: column;
-    top: 100px;
+    gap: 50px;
+    top: 50px;
   }
 }
 .line {

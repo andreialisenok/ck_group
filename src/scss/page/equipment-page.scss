@@ -22,25 +22,25 @@
   &__box {
     display: flex;
     flex-direction: column;
-    padding: 50px 0;
+    padding: 50px;
     border-image: linear-gradient(
         to right,
-        rgba(8, 15, 196, 0.5),
-        rgba(8, 15, 196, 0)
+        rgba(65, 84, 255, 1),
+        rgba(7, 7, 9, 1)
       )
       1;
     border-width: 1px;
     border-style: solid;
-    border-left: none;
-    border-right: none;
+    gap: 50px;
     img {
-      margin: 0 auto;
+      // margin: 0 auto;
       max-width: 550px;
       height: 100%;
     }
     @media (min-width: 992px) {
       flex-direction: row;
       justify-content: space-between;
+      gap: 100px;
     }
   }
   &__content {

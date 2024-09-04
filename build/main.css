@@ -3181,17 +3181,15 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 50px 0;
-  -o-border-image: linear-gradient(to right, rgba(8, 15, 196, 0.5), rgba(8, 15, 196, 0)) 1;
-     border-image: -webkit-gradient(linear, left top, right top, from(rgba(8, 15, 196, 0.5)), to(rgba(8, 15, 196, 0))) 1;
-     border-image: linear-gradient(to right, rgba(8, 15, 196, 0.5), rgba(8, 15, 196, 0)) 1;
+  padding: 50px;
+  -o-border-image: linear-gradient(to right, rgb(65, 84, 255), rgb(7, 7, 9)) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(rgb(65, 84, 255)), to(rgb(7, 7, 9))) 1;
+     border-image: linear-gradient(to right, rgb(65, 84, 255), rgb(7, 7, 9)) 1;
   border-width: 1px;
   border-style: solid;
-  border-left: none;
-  border-right: none;
+  gap: 50px;
 }
 .equipment-page__box img {
-  margin: 0 auto;
   max-width: 550px;
   height: 100%;
 }
@@ -3204,6 +3202,7 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    gap: 100px;
   }
 }
 .equipment-page__content h3 {
@@ -3836,11 +3835,11 @@ img {
           background-clip: text;
   line-height: 1;
   font-family: "Nunito", sans-serif;
-  font-size: calc(100px + 156 * (100vw - 320px) / 1600);
+  font-size: calc(100px + 140 * (100vw - 320px) / 1600);
 }
 .about-page-second__row div {
   max-width: 500px;
-  min-height: 200px;
+  height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3862,9 +3861,19 @@ img {
   font-size: 1.8rem;
   line-height: 1.2;
 }
+@media (min-width: 992px) {
+  .about-page-second__row div p:first-child {
+    font-size: 3.6rem;
+  }
+}
 .about-page-second__row div p:last-child {
   font-size: 1.4rem;
   line-height: 1.2;
+}
+@media (min-width: 992px) {
+  .about-page-second__row div p:last-child {
+    font-size: 3rem;
+  }
 }
 
 .line-wrap {
@@ -3876,7 +3885,7 @@ img {
 @media (min-width: 992px) {
   .line-wrap {
     height: 500vh;
-    top: -500px;
+    margin-top: -500px;
   }
 }
 
@@ -3898,7 +3907,8 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    top: 100px;
+    gap: 50px;
+    top: 50px;
   }
 }
 
