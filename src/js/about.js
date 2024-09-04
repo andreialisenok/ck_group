@@ -27,50 +27,50 @@ AOS.init({
 const data = [
   {
     year: 2014,
-    distance: 0.11,
+    distance: 0.13,
     text: 'первые шаги в отрасли, знакомство с майнингом в домашних условиях',
     subtext: '("домашний майнинг")',
   },
   {
     year: 2017,
-    distance: 0.22,
+    distance: 0.2,
     text: 'первые разработки собственных ЦОДов на базе морских контейнеров 40 ft"',
     subtext: '',
   },
   {
     year: 2018,
-    distance: 0.33,
+    distance: 0.28,
     text: 'общий объем эксплуатируемого оборудования более 10 мвт',
     subtext: '',
   },
   {
     year: 2021,
-    distance: 0.44,
+    distance: 0.34,
     text: 'Создание ООО "Цифра Капитал Групп"',
     subtext: '',
   },
   {
     year: 2022,
-    distance: 0.55,
+    distance: 0.41,
     text: 'Запуск 1го этапа строительства собственного ЦОДа "Башкирский".',
     subtext:
       '(Сотрудничество с ведущими Российскими производителями электроэнергии)',
   },
   {
     year: 2023,
-    distance: 0.66,
+    distance: 0.5,
     text: 'Завершение первого этапа строительства (потенциал 4 мгвт, +1000 ед. оборудования). Запуск площадки и размещение первых клиентов',
     subtext: '',
   },
   {
     year: 2024,
-    distance: 0.77,
+    distance: 0.6,
     text: 'Загрузка ЦОДа ~ 70% , вступление в ассоциацию промышленного майнинга и в реестр Минцифры РФ',
     subtext: '',
   },
   {
     year: 2025,
-    distance: 0.88,
+    distance: 0.8,
     text: 'Разработка 2го этапа по строительству собственного ЦОДа "Башкирский". Планируемая мощность ~ 50 мвт.',
     subtext: '',
   },
@@ -92,6 +92,11 @@ $(currencyBtns).on('click', function () {
 
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 scrollByPercent(0);
+
+let test = 0;
+document.addEventListener('click', function () {
+  console.log(test);
+})
 gsap.to('#green-line', { drawSVG: `0%`, duration: 0 });
 window.addEventListener('scroll', function (e) {
   const scrollTop =
@@ -100,6 +105,8 @@ window.addEventListener('scroll', function (e) {
     document.documentElement.scrollHeight || document.body.scrollHeight;
   const clientHeight = document.documentElement.clientHeight;
   const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 100;
+
+  test = (scrollPercentage).toFixed(1);
 
   const filteredData = data.filter((x) => x.distance * 100 <= scrollPercentage);
   const currentData = filteredData[filteredData.length - 1];
@@ -136,20 +143,20 @@ function scrollByPercent(percent) {
   const totalHeight = document.documentElement.scrollHeight;
   const targetPosition = totalHeight * (percent2 / 100);
 
-  const result =
-    targetPosition - window.innerHeight > 0
-      ? targetPosition - window.innerHeight
-      : targetPosition / 3;
+  // const result =
+  //   targetPosition - window.innerHeight > 0
+  //     ? targetPosition - window.innerHeight
+  //     : targetPosition / 3;
 
   window.scrollTo({
-    top: result,
-    behavior: 'smooth',
+    top: targetPosition,
+    // behavior: 'smooth',
   });
 }
-$(numsBtns).on('click', function () {
-  $(numsBtns).removeClass('active');
-  $(this).addClass('active');
-});
+// $(numsBtns).on('click', function () {
+//   $(numsBtns).removeClass('active');
+//   $(this).addClass('active');
+// });
 
 const yearsBtns = document.querySelectorAll('.years__btn');
 const yearsTitle = document.querySelector('.about-page-second__row h5');
@@ -158,16 +165,8 @@ yearsBtns.forEach((item, idx) => {
     data.forEach((obj, i) => {
       // console.log(idx === i);
       if (idx === i) {
-        // console.log(obj.distance);
-        // document.querySelector('.about-page-second__row p').textContent =
-        //   obj.text;
-        // document.querySelector('.about-page-second__row h5').textContent =
-        //   obj.year;
-        // gsap.to('#green-line', {
-        //   drawSVG: `${obj.distance * 100}%`,
-        //   duration: 0.1,
-        // });
-        scrollByPercent(obj.distance + 0.09);
+        console.log("---- "+obj.distance)
+        scrollByPercent(obj.distance);
       }
     });
   });
