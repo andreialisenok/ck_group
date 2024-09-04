@@ -165,7 +165,6 @@ yearsBtns.forEach((item, idx) => {
     data.forEach((obj, i) => {
       // console.log(idx === i);
       if (idx === i) {
-        console.log('---- ' + obj.distance);
         scrollByPercent(obj.distance);
       }
     });
