@@ -63,7 +63,7 @@
       font-size: calc(100px + (256 - 100) * ((100vw - 320px) / (1920 - 320)));
     }
     div {
-      width: 500px;
+      max-width: 500px;
       min-height: 200px;
       display: flex;
       flex-direction: column;

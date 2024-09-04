@@ -3839,7 +3839,7 @@ img {
   font-size: calc(100px + 156 * (100vw - 320px) / 1600);
 }
 .about-page-second__row div {
-  width: 500px;
+  max-width: 500px;
   min-height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
