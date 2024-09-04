@@ -1,11 +1,11 @@
 .equipment {
-  background: url('./img/bg/equipment-bg.png') no-repeat;
+  // background: url('./img/bg/equipment-bg.png') no-repeat;
   // background-position: left;
   // background-size: cover;
-  background-size: 100%;
+  // background-size: 100%;
   padding: 400px 0 0;
-  margin-top: -100px;
-  background-position: left 5%;
+  // margin-top: -100px;
+  // background-position: left 5%;
   position: relative;
   z-index: 80;
   // background-position: 65%;
@@ -19,10 +19,18 @@
     // min-height: 1920px;
   }
   & > img {
-    display: none;
-
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -400px;
+    z-index: -100;
+    object-position: right;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    min-width: 1200px;
     @media (min-width: 992px) {
-      display: block;
+      min-width: 100%;
       left: 0;
       right: 0;
       top: 0;

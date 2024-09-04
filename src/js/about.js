@@ -28,47 +28,57 @@ const data = [
   {
     year: 2014,
     distance: 0.11,
-    text: 'первые шаги в отрасли, знакомство с майнингом в домашних условиях ( "домашний майнинг" )',
+    text: 'первые шаги в отрасли, знакомство с майнингом в домашних условиях',
+    subtext: '("домашний майнинг")',
   },
   {
     year: 2017,
     distance: 0.22,
     text: 'первые разработки собственных ЦОДов на базе морских контейнеров 40 ft"',
+    subtext: '',
   },
   {
     year: 2018,
     distance: 0.33,
-    text: 'общий объем эксплуатируемого оборудования более 10 мвт"',
+    text: 'общий объем эксплуатируемого оборудования более 10 мвт',
+    subtext: '',
   },
   {
     year: 2021,
     distance: 0.44,
     text: 'Создание ООО "Цифра Капитал Групп"',
+    subtext: '',
   },
   {
     year: 2022,
     distance: 0.55,
-    text: 'Запуск 1го этапа строительства собственного ЦОДа "Башкирский". (Сотрудничество с ведущими Российскими производителями электроэнергии)',
+    text: 'Запуск 1го этапа строительства собственного ЦОДа "Башкирский".',
+    subtext:
+      '(Сотрудничество с ведущими Российскими производителями электроэнергии)',
   },
   {
     year: 2023,
     distance: 0.66,
     text: 'Завершение первого этапа строительства (потенциал 4 мгвт, +1000 ед. оборудования). Запуск площадки и размещение первых клиентов',
+    subtext: '',
   },
   {
     year: 2024,
     distance: 0.77,
     text: 'Загрузка ЦОДа ~ 70% , вступление в ассоциацию промышленного майнинга и в реестр Минцифры РФ',
+    subtext: '',
   },
   {
     year: 2025,
     distance: 0.88,
     text: 'Разработка 2го этапа по строительству собственного ЦОДа "Башкирский". Планируемая мощность ~ 50 мвт.',
+    subtext: '',
   },
   {
     year: 2026,
     distance: 0.99,
     text: '3й этап. Планируемая мощность ЦОДа "Башкирский" ~ 120 мвт',
+    subtext: '',
   },
 ];
 
@@ -96,14 +106,15 @@ window.addEventListener('scroll', function (e) {
 
   if (currentData) {
     const index = data.indexOf(currentData);
-
     $(numsBtns).removeClass('active');
     $(numsBtns).eq(index).addClass('active');
 
-    document.querySelector('.about-page-second__row p').textContent =
+    document.querySelector('.about-page-second__row div .text').textContent =
       currentData.text;
     document.querySelector('.about-page-second__row h5').textContent =
       currentData.year;
+    document.querySelector('.about-page-second__row div .subtext').textContent =
+      currentData.subtext;
   }
 
   gsap.to('#green-line', {

@@ -1,8 +1,8 @@
 .design {
-  background: url('./img/bg/design-bg.png') no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 50px 0 0 0;
+  // background: url('./img/bg/design-bg.png') no-repeat;
+  // background-size: cover;
+  // background-position: center;
+  padding: 350px 0 0 0;
   // background-position: right 20%;
   position: relative;
   @media (min-width: 992px) {
@@ -17,18 +17,24 @@
     // position: relative;
   }
   & > img {
-    display: none;
+    display: block;
+    left: -50%;
+    right: 0;
+    top: -2%;
+    width: 100%;
+    position: absolute;
+    z-index: -100;
+    object-fit: cover;
+    height: auto;
+    min-width: 170%;
 
     @media (min-width: 992px) {
-      display: block;
+      min-width: 100%;
       left: 0;
       right: 0;
       top: 0;
       width: 100%;
-      position: absolute;
       height: 1920px;
-      z-index: -100;
-      object-fit: cover;
     }
   }
   .left-text {
@@ -191,9 +197,12 @@
     }
   }
   .text {
-    font-size: 2.2rem;
     text-align: center;
     margin: 50px 0 20px;
+    font-size: 2rem;
+    @media (min-width: 992px) {
+      font-size: 2.2rem;
+    }
   }
   .btn {
     margin: 0 auto;

@@ -1,24 +1,24 @@
 .about-page-first {
-  background: url('./img/about-first.jpg') no-repeat;
-  padding: 420px 0 0px;
+  background: url('./img/bg/about-first.jpg') no-repeat;
   background-size: cover;
-  background-position: 65%;
-  min-height: 1550px;
+  background-position: 75% -50px;
+  min-height: 100vh;
   position: relative;
   z-index: 1000;
-  @media (min-width: 768px) {
-  }
+  padding: 400px 0 0px;
+
   @media (min-width: 992px) {
-    background-position: center;
+    background-position: center top;
+    min-height: 1458px;
   }
   h2 {
     margin-bottom: 50px;
     line-height: 1.2;
     font-weight: 400;
     max-width: 800px;
-    font-size: 4.2rem;
+    font-size: 3.6rem;
     @media (min-width: 992px) {
-      font-size: 6.4rem;
+      font-size: 5.6rem;
     }
   }
   p {
@@ -37,9 +37,7 @@
   // z-index: 1000;
   @media (min-width: 768px) {
   }
-  @media (min-width: 992px) {
-    // background-position: right;
-  }
+
   &__row {
     display: flex;
     justify-content: space-between;
@@ -50,6 +48,7 @@
       gap: 100px;
     }
     h5 {
+      font-weight: 400;
       background: linear-gradient(
         135deg,
         #ffffff 0%,
@@ -62,28 +61,57 @@
       font-family: $nunito;
       font-size: calc(100px + (256 - 100) * ((100vw - 320px) / (1920 - 320)));
     }
-    p {
-      font-size: calc(26px + (36 - 26) * ((100vw - 320px) / (1920 - 320)));
-      line-height: 1.2;
-      min-height: 300px;
-      // display: none;
-      // &.active {
-      //   display: block;
-      // }
+    div {
+      max-width: 500px;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       @media (min-width: 992px) {
         padding-top: 30px;
-        min-height: 400px;
+      }
+      p {
+        &:first-child {
+          font-size: 1.8rem;
+          line-height: 1.2;
+        }
+        &:last-child {
+          font-size: 1.4rem;
+          line-height: 1.2;
+        }
       }
     }
   }
 }
 .line-wrap {
   position: relative;
-  height: 300vh;
+  height: 500vh;
   z-index: 1000;
   top: 20px;
   @media (min-width: 992px) {
-    top: -100px;
+    height: 500vh;
+    top: -500px;
+  }
+  .el {
+    display: none;
+    @media (min-width: 992px) {
+      // background-position: right;
+      display: block;
+      position: absolute;
+      bottom: -500px;
+      left: -1600px;
+      content: '';
+      width: 3039px;
+      height: 1895px;
+      filter: blur(200px);
+      background: radial-gradient(
+        circle,
+        rgba(19, 28, 255, 1) 0%,
+        rgba(19, 28, 255, 0) 70%
+      );
+      opacity: 0.5;
+      transform: translate3d(0, 0, 0);
+    }
   }
 }
 .line-inside {

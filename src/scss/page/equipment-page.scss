@@ -142,9 +142,13 @@
   }
   &__row {
     p {
+      position: absolute;
+      top: 30px;
+      left: 0;
+      right: 0;
       text-align: center;
-      margin-bottom: 30px;
       @media (min-width: 992px) {
+        position: static;
         margin-bottom: 350px;
       }
       a {
@@ -152,11 +156,15 @@
       }
     }
     h2 {
+      margin-top: 20px;
       font-size: calc(26px + (56 - 26) * ((100vw - 320px) / (1920 - 320)));
       line-height: 1;
       margin-bottom: 40px;
       max-width: 700px;
       font-weight: 400;
+      @media (min-width: 992px) {
+        margin-top: 0;
+      }
     }
   }
 }

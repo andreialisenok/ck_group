@@ -1,30 +1,46 @@
 .services {
-  background: url('./img/bg/services-bg.png') no-repeat;
-  background-position: center -8%;
-  background-size: 730px;
-  padding: 120px 0 0px;
+  // background-position: center -8%;
+  // background-size: 730px;
+  // padding: 120px 0 0px;
   // min-height: 1050px;
   position: relative;
-  z-index: 100;
   // overflow: hidden;
-  // z-index: 1000;
+  z-index: 100;
   // background-position: 65%;
   // &__row {
   //   position: relative;
   //   z-index: 1000;
   // }
+  padding: 500px 0 0 0;
   @media (min-width: 992px) {
+    background: url('./img/bg/services-bg.png') no-repeat;
     background-size: cover;
     padding: 630px 0 0px;
     margin-top: -360px;
     background-position: center;
     min-height: 1920px;
+    z-index: 100;
   }
+  & > img {
+    position: absolute;
+    top: -200px;
+    left: 0px;
+    min-width: 500px;
+    z-index: -100;
+    object-fit: cover;
+    right: 0;
+    height: 100%;
+    object-position: right;
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+
   h2 {
     display: flex;
     flex-direction: column;
     font-size: 3.2rem;
-    margin-top: 500px;
+    // margin-top: 500px;
     margin-bottom: 30px;
     font-weight: 400;
     line-height: 1;
@@ -69,10 +85,13 @@
       cursor: pointer;
       border: none;
       color: rgba(255, 255, 255, 0.46);
-      font-size: 2.2rem;
       line-height: 1;
       font-weight: 400;
       text-align: left;
+      font-size: 2rem;
+      @media (min-width: 992px) {
+        font-size: 2.2rem;
+      }
       &:hover {
         color: $white;
       }
