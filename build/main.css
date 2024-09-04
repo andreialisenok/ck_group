@@ -3801,9 +3801,9 @@ img {
 }
 @media (min-width: 992px) {
   .about-page-first {
-    background-position: center top;
+    background-position: center -50px;
     min-height: 1458px;
-    padding: 400px 0 0px;
+    padding: 300px 0 0px;
   }
 }
 .about-page-first h2 {
@@ -3843,7 +3843,7 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 100px;
+    gap: 200px;
   }
 }
 .about-page-second__row h5 {
@@ -3882,7 +3882,7 @@ img {
 }
 @media (min-width: 992px) {
   .about-page-second__row div p:first-child {
-    font-size: 3.6rem;
+    font-size: 3.1rem;
   }
 }
 .about-page-second__row div p:last-child {
@@ -3891,7 +3891,7 @@ img {
 }
 @media (min-width: 992px) {
   .about-page-second__row div p:last-child {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 }
 
@@ -3926,7 +3926,7 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 50px;
+    gap: 80px;
     top: 50px;
   }
 }
@@ -4005,11 +4005,11 @@ img {
 .el-box .el {
   display: block;
   position: absolute;
-  bottom: -500px;
-  left: -1600px;
+  bottom: -200px;
+  left: -200px;
   content: "";
-  width: 3039px;
-  height: 1895px;
+  width: 1000px;
+  height: 1000px;
   -webkit-filter: blur(200px);
           filter: blur(200px);
   background: radial-gradient(circle, rgb(19, 28, 255) 0%, rgba(19, 28, 255, 0) 70%);
