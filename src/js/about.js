@@ -146,10 +146,10 @@ function scrollByPercent(percent) {
     behavior: 'smooth',
   });
 }
-$(numsBtns).on('click', function () {
-  $(numsBtns).removeClass('active');
-  $(this).addClass('active');
-});
+// $(numsBtns).on('click', function () {
+//   $(numsBtns).removeClass('active');
+//   $(this).addClass('active');
+// });
 
 const yearsBtns = document.querySelectorAll('.years__btn');
 const yearsTitle = document.querySelector('.about-page-second__row h5');
@@ -167,7 +167,7 @@ yearsBtns.forEach((item, idx) => {
         //   drawSVG: `${obj.distance * 100}%`,
         //   duration: 0.1,
         // });
-        scrollByPercent(obj.distance + 0.09);
+        scrollByPercent(obj.distance);
       }
     });
   });

@@ -5,8 +5,6 @@
   background-position: 65%;
   min-height: 1200px;
   @media (min-width: 992px) {
-  }
-  @media (min-width: 992px) {
     background-position: right;
   }
   h2 {
@@ -22,7 +20,7 @@
   &__box {
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 10px;
     border-image: linear-gradient(
         to right,
         rgba(65, 84, 255, 1),
@@ -32,10 +30,14 @@
     border-width: 1px;
     border-style: solid;
     gap: 50px;
+    @media (min-width: 992px) {
+      padding: 50px;
+    }
     img {
-      // margin: 0 auto;
-      max-width: 550px;
-      height: 100%;
+      @media (min-width: 992px) {
+        width: 50%;
+        object-fit: cover;
+      }
     }
     @media (min-width: 992px) {
       flex-direction: row;
@@ -79,8 +81,6 @@
       display: flex;
     }
     h5 {
-      margin-top: 30px;
-      margin-bottom: 30px;
       font-family: $nunito;
       font-size: 2.4rem;
       font-weight: 400;
@@ -93,6 +93,11 @@
     p {
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
+      gap: 5px;
+      @media (min-width: 576px) {
+        flex-direction: row;
+      }
     }
     span {
       font-family: $nunito;
@@ -179,8 +184,6 @@
   z-index: 1000;
   min-height: 1050px;
   @media (min-width: 992px) {
-  }
-  @media (min-width: 992px) {
     background-position: right;
   }
   &__row {
@@ -211,8 +214,6 @@
   position: relative;
   z-index: 1000;
   min-height: 830px;
-  @media (min-width: 992px) {
-  }
   @media (min-width: 992px) {
     background-position: right;
   }
