@@ -23,7 +23,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
+    top: 100px;
     width: 100%;
     z-index: -100;
     object-fit: cover;
@@ -45,7 +45,7 @@
     }
   }
   .first-btn {
-    margin: 0 auto 350px;
+    margin: 0 auto 500px;
     @media (min-width: 992px) {
       margin: 0 auto 420px;
     }

@@ -1774,7 +1774,7 @@ img {
 }
 
 .equipment {
-  padding: 400px 0 0;
+  padding: 450px 0 0;
   position: relative;
   z-index: 80;
 }
@@ -1789,7 +1789,7 @@ img {
   position: absolute;
   left: 0;
   right: 0;
-  top: -400px;
+  top: -300px;
   z-index: -100;
   -o-object-position: right;
      object-position: right;
@@ -1968,7 +1968,7 @@ img {
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
+  top: 100px;
   width: 100%;
   z-index: -100;
   -o-object-fit: cover;
@@ -1995,7 +1995,7 @@ img {
   }
 }
 .hosting .first-btn {
-  margin: 0 auto 350px;
+  margin: 0 auto 500px;
 }
 @media (min-width: 992px) {
   .hosting .first-btn {
@@ -3451,10 +3451,11 @@ img {
   background: url("./img/equipment-page-services-bg.png") no-repeat;
   background-size: 280%;
   background-position: right;
-  padding: 100px 0 0px;
+  padding: 700px 0 0px;
   position: relative;
   z-index: 1000;
   height: 1000px;
+  margin-top: -200px;
 }
 @media (min-width: 992px) {
   .equipment-page-services {
@@ -3496,7 +3497,7 @@ img {
   position: relative;
   z-index: 1000;
   min-height: 830px;
-  margin-top: -300px;
+  margin-top: -100px;
 }
 @media (min-width: 992px) {
   .equipment-page-form {
@@ -3987,7 +3988,7 @@ img {
 
 .line-inside {
   position: sticky;
-  top: 20px;
+  top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3995,7 +3996,6 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
 }
 @media (min-width: 992px) {
   .line-inside {

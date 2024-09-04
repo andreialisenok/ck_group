@@ -202,10 +202,11 @@
   background: url('./img/equipment-page-services-bg.png') no-repeat;
   background-size: 280%;
   background-position: right;
-  padding: 100px 0 0px;
+  padding: 700px 0 0px;
   position: relative;
   z-index: 1000;
   height: 1000px;
+  margin-top: -200px;
   @media (min-width: 992px) {
     background-size: cover;
     background-position: right;
@@ -239,7 +240,7 @@
   position: relative;
   z-index: 1000;
   min-height: 830px;
-  margin-top: -300px;
+  margin-top: -100px;
   @media (min-width: 992px) {
     // background-position: right;
     margin-top: -300px;
