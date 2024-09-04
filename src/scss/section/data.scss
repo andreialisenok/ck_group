@@ -255,13 +255,15 @@
     }
   }
   .data__wrap {
-    background: url('./img/form1-bg.jpg') no-repeat;
+    background: url('./img/form1-bg.png') no-repeat;
     background-size: cover;
     padding: 20px 15px 50px;
     // height: 590px;
     position: relative;
     z-index: 1000;
     background-position: 90%;
+    border-radius: 10px;
+    overflow: hidden;
     @media (min-width: 992px) {
       padding: 70px 60px 95px;
       background-position: left;

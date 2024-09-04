@@ -22,13 +22,15 @@
     z-index: 1000;
   }
   .mining__wrap {
-    background: url('./img/form1-bg.jpg') no-repeat;
+    background: url('./img/form1-bg.png') no-repeat;
     background-size: cover;
     padding: 20px;
     // height: 590px;
     position: relative;
     z-index: 1000;
     background-position: 90%;
+    overflow: hidden;
+    border-radius: 10px;
     @media (min-width: 992px) {
       height: 590px;
       padding: 60px;

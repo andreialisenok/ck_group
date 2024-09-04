@@ -126,17 +126,14 @@ window.addEventListener('scroll', function (e) {
   // }
 });
 function scrollByPercent(percent) {
-  console.log(percent);
   const percent2 = percent * 100;
   const totalHeight = document.documentElement.scrollHeight;
   const targetPosition = totalHeight * (percent2 / 100);
-  console.log(targetPosition);
 
   const result =
     targetPosition - window.innerHeight > 0
       ? targetPosition - window.innerHeight
       : targetPosition / 3;
-  console.log(result);
 
   window.scrollTo({
     top: result,

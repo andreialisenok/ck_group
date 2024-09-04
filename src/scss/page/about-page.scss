@@ -5,11 +5,12 @@
   min-height: 100vh;
   position: relative;
   z-index: 1000;
-  padding: 400px 0 0px;
+  padding: 500px 0 0px;
 
   @media (min-width: 992px) {
     background-position: center top;
     min-height: 1458px;
+    padding: 400px 0 0px;
   }
   h2 {
     margin-bottom: 50px;
@@ -63,7 +64,7 @@
     }
     div {
       max-width: 500px;
-      min-height: 400px;
+      min-height: 200px;
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -92,41 +93,25 @@
     height: 500vh;
     top: -500px;
   }
-  .el {
-    display: none;
-    @media (min-width: 992px) {
-      // background-position: right;
-      display: block;
-      position: absolute;
-      bottom: -500px;
-      left: -1600px;
-      content: '';
-      width: 3039px;
-      height: 1895px;
-      filter: blur(200px);
-      background: radial-gradient(
-        circle,
-        rgba(19, 28, 255, 1) 0%,
-        rgba(19, 28, 255, 0) 70%
-      );
-      opacity: 0.5;
-      transform: translate3d(0, 0, 0);
-    }
-  }
 }
 .line-inside {
   position: sticky;
   top: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 100px;
   @media (min-width: 992px) {
+    flex-direction: column;
     top: 100px;
   }
 }
 .line {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
-  z-index: 1000;
+  // top: 0;
+  // position: absolute;
+  // width: 100%;
+  // left: 0;
+  // right: 0;
+  // z-index: 1000;
 }
 .svg-container {
   svg {
@@ -147,7 +132,6 @@
   stroke: rgba(255, 255, 255, 1);
   stroke-width: 1px;
 }
-
 .years {
   max-width: 1220px;
   display: flex;
@@ -156,14 +140,12 @@
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  justify-content: center;
   @media (min-width: 992px) {
     justify-content: space-between;
     flex-direction: row;
     gap: 0;
   }
 }
-
 .years div {
   color: #fff;
   opacity: 0.2;
@@ -171,5 +153,37 @@
   cursor: pointer;
   &.active {
     opacity: 1;
+  }
+}
+.el-box {
+  display: none;
+  @media (min-width: 992px) {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: -10000;
+    height: 100%;
+    bottom: 0;
+    bottom: -500px;
+  }
+  .el {
+    display: block;
+    position: absolute;
+    bottom: -500px;
+    left: -1600px;
+    content: '';
+    width: 3039px;
+    height: 1895px;
+    filter: blur(200px);
+    background: radial-gradient(
+      circle,
+      rgba(19, 28, 255, 1) 0%,
+      rgba(19, 28, 255, 0) 70%
+    );
+    opacity: 0.5;
+    transform: translate3d(0, 0, 0);
   }
 }
