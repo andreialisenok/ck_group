@@ -63,11 +63,12 @@
       font-size: calc(100px + (256 - 100) * ((100vw - 320px) / (1920 - 320)));
     }
     div {
-      max-width: 500px;
+      width: 500px;
       min-height: 200px;
       display: flex;
       flex-direction: column;
       gap: 10px;
+      align-items: flex-start;
       @media (min-width: 992px) {
         padding-top: 30px;
       }
@@ -166,7 +167,6 @@
     overflow: hidden;
     z-index: -10000;
     height: 100%;
-    bottom: 0;
     bottom: -500px;
   }
   .el {

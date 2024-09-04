@@ -3839,7 +3839,7 @@ img {
   font-size: calc(100px + 156 * (100vw - 320px) / 1600);
 }
 .about-page-second__row div {
-  max-width: 500px;
+  width: 500px;
   min-height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3849,6 +3849,9 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 @media (min-width: 992px) {
   .about-page-second__row div {
@@ -3971,7 +3974,6 @@ img {
     overflow: hidden;
     z-index: -10000;
     height: 100%;
-    bottom: 0;
     bottom: -500px;
   }
 }
