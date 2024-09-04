@@ -284,6 +284,22 @@ img {
     display: none;
   }
 }
+.menu__item.active {
+  position: relative;
+}
+.menu__item.active:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  width: 110%;
+  height: 3px;
+  border-radius: 100%;
+  background: radial-gradient(rgb(16, 24, 220), rgba(16, 24, 220, 0));
+  -webkit-transform: translateX(-5%);
+          transform: translateX(-5%);
+}
 .menu__link {
   font-family: "Nunito", sans-serif;
   color: #fff;
@@ -307,6 +323,9 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
+}
+.btn:hover {
+  text-shadow: 0px 0px 7px #fff;
 }
 .btn--cost {
   background: url("./img/btn1-bg.png") no-repeat;
@@ -3173,7 +3192,7 @@ img {
 }
 @media (min-width: 992px) {
   .equipment-page h2 {
-    margin-bottom: 180px;
+    margin-bottom: 50px;
   }
 }
 .equipment-page__box {
@@ -3376,9 +3395,9 @@ img {
   .equipment-page-services-calc {
     background: url("./img/bg/calc-bg.png") no-repeat;
     background-size: cover;
-    background-position: 65%;
+    background-position: center;
     z-index: 1000;
-    min-height: 994px;
+    min-height: 800px;
   }
 }
 @media (min-width: 992px) {
@@ -3411,25 +3430,37 @@ img {
   margin-bottom: 40px;
   max-width: 700px;
   font-weight: 400;
+  text-align: center;
 }
 @media (min-width: 992px) {
   .equipment-page-services-calc__row h2 {
     margin-top: 0;
+    text-align: left;
+  }
+}
+.equipment-page-services-calc__row .btn {
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .equipment-page-services-calc__row .btn {
+    margin: 0;
   }
 }
 
 .equipment-page-services {
-  background: url("./img/equipment-page-services-bg.jpg") no-repeat;
-  background-size: cover;
-  background-position: 65%;
-  padding: 130px 0 0px;
+  background: url("./img/equipment-page-services-bg.png") no-repeat;
+  background-size: 280%;
+  background-position: right;
+  padding: 100px 0 0px;
   position: relative;
   z-index: 1000;
-  min-height: 1050px;
+  height: 1000px;
 }
 @media (min-width: 992px) {
   .equipment-page-services {
+    background-size: cover;
     background-position: right;
+    min-height: 1416px;
   }
 }
 .equipment-page-services__row {
@@ -3461,17 +3492,15 @@ img {
 }
 
 .equipment-page-form {
-  background: url("./img/equipment-page-form.jpg") no-repeat;
-  background-size: cover;
-  background-position: 65%;
   padding: 70px 0 150px;
   position: relative;
   z-index: 1000;
   min-height: 830px;
+  margin-top: -300px;
 }
 @media (min-width: 992px) {
   .equipment-page-form {
-    background-position: right;
+    margin-top: -300px;
   }
 }
 .equipment-page-form h3 {

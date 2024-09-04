@@ -29,6 +29,21 @@
         display: none;
       }
     }
+    &.active {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        width: 110%;
+        height: 3px;
+        border-radius: 100%;
+        background: radial-gradient(rgba(16, 24, 220, 1), rgba(16, 24, 220, 0));
+        transform: translateX(-5%);
+      }
+    }
   }
   &__link {
     font-family: $nunito;
