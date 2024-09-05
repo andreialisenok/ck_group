@@ -50,13 +50,13 @@ body
                                     option(data-consumption="2000", data-hashrate="200") Miner 3
                                     option(data-consumption="4000", data-hashrate="400") Miner 4
                             div.calc-page__item
-                                label(for="electricityCost") Стоимость электричества (RUB/квт)
+                                label(for="electricityCost") Стоимость электричества (RUB/kW)
                                 input#electricityCost(type="number", min="0.1", value="10")
                             div.calc-page__item
                                 label(for="hashrate") Мощность (TH/s)
                                 input#hashrate(type="number", value="200", min="1")
                             div.calc-page__item
-                                label(for="consumption") Потребление (вт/час)
+                                label(for="consumption") Потребление (W)
                                 input#consumption(type="number", min="1", value="100")
                             div.calc-page__item
                                 label(for="rateUSDRUB") Курс USD/RUB
