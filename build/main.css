@@ -3875,7 +3875,8 @@ img {
 .about-page-first p {
   font-size: 1.8rem;
   max-width: 500px;
-  font-size: 1.2;
+  line-height: 1.2;
+  margin-bottom: 100px;
 }
 
 .about-page-second__row {
@@ -3910,7 +3911,7 @@ img {
           background-clip: text;
   line-height: 1;
   font-family: "Nunito", sans-serif;
-  font-size: calc(100px + 140 * (100vw - 320px) / 1600);
+  font-size: calc(140px + 100 * (100vw - 320px) / 1600);
 }
 .about-page-second__row h5::before {
   content: "";

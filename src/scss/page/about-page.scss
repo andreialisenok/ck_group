@@ -25,7 +25,8 @@
   p {
     font-size: 1.8rem;
     max-width: 500px;
-    font-size: 1.2;
+    line-height: 1.2;
+    margin-bottom: 100px;
   }
 }
 .about-page-second {
@@ -62,7 +63,7 @@
       background-clip: text;
       line-height: 1;
       font-family: $nunito;
-      font-size: calc(100px + (240 - 100) * ((100vw - 320px) / (1920 - 320)));
+      font-size: calc(140px + (240 - 140) * ((100vw - 320px) / (1920 - 320)));
       &::before {
         content: '';
         display: block;
