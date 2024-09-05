@@ -28,32 +28,32 @@ const data = [
   {
     year: 2014,
     distance: 0.13,
-    text: 'Первые шаги в отрасли, знакомство с майнингом в домашних условиях',
+    text: 'Начало работы в отрасли и знакомство с майнингом в домашних условиях.',
     subtext: '',
     // subtext: '("домашний майнинг")',
   },
   {
     year: 2017,
     distance: 0.2,
-    text: 'Первые разработки собственных ЦОДов на базе морских контейнеров 40 ft"',
+    text: 'Первый опыт разработки собственных ЦОД на базе морских контейнеров (40 ft).',
     subtext: '',
   },
   {
     year: 2018,
     distance: 0.28,
-    text: 'Общий объем эксплуатируемого оборудования более 10 мвт',
+    text: 'Общий объём эксплуатируемого оборудования превысил 10 МВт.',
     subtext: '',
   },
   {
     year: 2021,
     distance: 0.34,
-    text: 'Создание ООО "Цифра Капитал Групп"',
+    text: 'Создание ООО «Цифра Капитал Групп». ',
     subtext: '',
   },
   {
     year: 2022,
     distance: 0.41,
-    text: 'Запуск 1го этапа строительства собственного ЦОДа "Башкирский".',
+    text: 'Запуск 1-го этапа строительства собственного ЦОДа «Башкирский».',
     subtext: '',
     // subtext:
     //   '(Сотрудничество с ведущими Российскими производителями электроэнергии)',
@@ -61,25 +61,25 @@ const data = [
   {
     year: 2023,
     distance: 0.5,
-    text: 'Завершение первого этапа строительства (потенциал 4 мгвт, +1000 ед. оборудования). Запуск площадки и размещение первых клиентов',
+    text: 'Завершение первого этапа строительства ЦОДа «Башкирский» (Потенциал - 4 МВт, + 1000 единиц оборудования).</br> </br> Запуск площадки и размещение первых клиентов. ',
     subtext: '',
   },
   {
     year: 2024,
     distance: 0.6,
-    text: 'Загрузка ЦОДа ~ 70% , вступление в ассоциацию промышленного майнинга и в реестр Минцифры РФ',
+    text: 'Заполнение ЦОДа на ~70% </br> </br> Вступление в Ассоциацию промышленного майнинга </br> </br> Включение в реестр Минцифры РФ.',
     subtext: '',
   },
   {
     year: 2025,
     distance: 0.8,
-    text: 'Разработка 2го этапа по строительству собственного ЦОДа "Башкирский". Планируемая мощность ~ 50 мвт.',
+    text: 'Разработка 2-го этапа строительства ЦОДа «Башкирский» с планируемой мощностью ~ 50 МВт. ',
     subtext: '',
   },
   {
     year: 2026,
     distance: 0.93,
-    text: '3й этап. Планируемая мощность ЦОДа "Башкирский" ~ 120 мвт',
+    text: 'Начало 3-го этапа строительства ЦОДа «Башкирский», планируемая мощность ~ 100 МВт.',
     subtext: '',
   },
 ];
@@ -124,11 +124,11 @@ window.addEventListener('scroll', function (e) {
     $(numsBtns).removeClass('active');
     $(numsBtns).eq(index).addClass('active');
 
-    document.querySelector('.about-page-second__row div .text').textContent =
+    document.querySelector('.about-page-second__row div .text').innerHTML =
       currentData.text;
-    document.querySelector('.about-page-second__row h5').textContent =
+    document.querySelector('.about-page-second__row h5').innerHTML =
       currentData.year;
-    document.querySelector('.about-page-second__row div .subtext').textContent =
+    document.querySelector('.about-page-second__row div .subtext').innerHTML =
       currentData.subtext;
   }
 
