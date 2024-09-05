@@ -3390,6 +3390,7 @@ img {
 .equipment-page-services-calc {
   position: relative;
   padding: 50px 0 0px;
+  z-index: 1001;
 }
 @media (min-width: 992px) {
   .equipment-page-services-calc {
@@ -3462,6 +3463,8 @@ img {
     background-size: cover;
     background-position: right;
     min-height: 1416px;
+    padding: 100px 0 0 0;
+    margin-top: 0;
   }
 }
 .equipment-page-services__row {
