@@ -18,10 +18,14 @@ $('.equipment-page__content .buy').on('click', function () {
     .parents('.equipment-page__info')
     .find('.equipment-page__bottom span')
     .text();
-  console.log(productPrice, productName);
+  const type = $(this)
+    .parents('.equipment-page__content')
+    .find('.btns button.active')
+    .text();
+  console.log(type);
 
-  $('.productName input').attr('placeholder', `${productName}`);
-  $('.productPrice input').attr('placeholder', `${productPrice}`);
+  $('.productName input').attr('value', `${productName} - ${type}`);
+  $('.productPrice input').attr('value', `${productPrice}`);
 });
 
 $('.modal__close').on('click', () => {
