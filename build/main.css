@@ -3422,7 +3422,10 @@ img {
 }
 .equipment-page-services-calc__row p a {
   text-decoration: underline;
-  color: #080FC4;
+  color: #fff;
+}
+.equipment-page-services-calc__row p a:hover {
+  color: #0019ff;
 }
 .equipment-page-services-calc__row h2 {
   margin-top: 20px;

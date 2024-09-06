@@ -175,7 +175,10 @@
       }
       a {
         text-decoration: underline;
-        color: $blue;
+        color: $white;
+        &:hover {
+          color: #0019ff;
+        }
       }
     }
     h2 {
