@@ -40,13 +40,13 @@
           </div>
           <div class="equipment-page__box"><img src="./img/equipment.png" alt="">
             <div class="equipment-page__content">
-              <h3>Bitmain Antminer T21 190 TH/s</h3>
+              <h3>Bitmain Antminer T21 100 TH/s</h3>
               <div class="btns">
-                <button class="active" type="button">120 TX</button>
-                <button type="button">122 TX</button>
-                <button type="button">124 TX</button>
+                <button class="active" type="button" data-id="1">125 TX</button>
+                <button type="button" data-id="2">126 TX</button>
+                <button type="button" data-id="3">130 TX</button>
               </div>
-              <div class="equipment-page__info active">
+              <div class="equipment-page__info active" data-id="1">
                 <div class="equipment-page__top">
                   <p><span>Потребление — 3610 W</span><span>Хешрейт — 190 TH/s</span></p>
                   <p><span>Добываемые монеты — BTC</span><span>Алгоритм — SHA-256</span></p>
@@ -64,7 +64,7 @@
                   </p>
                 </div>
               </div>
-              <div class="equipment-page__info">
+              <div class="equipment-page__info" data-id="2">
                 <div class="equipment-page__top">
                   <p><span>Потребление — 3610 W</span><span>Хешрейт — 190 TH/s</span></p>
                   <p><span>Добываемые монеты — BTC</span><span>Алгоритм — SHA-256</span></p>
@@ -82,7 +82,71 @@
                   </p>
                 </div>
               </div>
-              <div class="equipment-page__info">
+              <div class="equipment-page__info" data-id="3">
+                <div class="equipment-page__top">
+                  <p><span>Потребление — 3610 W</span><span>Хешрейт — 190 TH/s</span></p>
+                  <p><span>Добываемые монеты — BTC</span><span>Алгоритм — SHA-256</span></p>
+                </div>
+                <h5>Расчет прибыли</h5>
+                <div class="equipment-page__middle">
+                  <p><span>Расход э/э за день</span><span>2842,56</span></p>
+                  <p><span>Доход в день</span><span>2866,79 $</span></p>
+                  <p><span>Прибыль в день</span><span>24,23 $</span></p>
+                  <p><span>Прибыль в день</span><span>24,23 $</span></p>
+                </div>
+                <div class="equipment-page__bottom">
+                  <p><span>3070000 $</span>
+                    <button class="btn btn--cost buy" type="button">Заказать</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="equipment-page__box"><img src="./img/equipment.png" alt="">
+            <div class="equipment-page__content">
+              <h3>Bitmain Antminer T21 190 TH/s</h3>
+              <div class="btns">
+                <button class="active" type="button" data-id="1">125 TX</button>
+                <button type="button" data-id="2">126 TX</button>
+                <button type="button" data-id="3">130 TX</button>
+              </div>
+              <div class="equipment-page__info active" data-id="1">
+                <div class="equipment-page__top">
+                  <p><span>Потребление — 3610 W</span><span>Хешрейт — 190 TH/s</span></p>
+                  <p><span>Добываемые монеты — BTC</span><span>Алгоритм — SHA-256</span></p>
+                </div>
+                <h5>Расчет прибыли</h5>
+                <div class="equipment-page__middle">
+                  <p><span>Расход э/э за день</span><span>2842,56</span></p>
+                  <p><span>Доход в день</span><span>2866,79 $</span></p>
+                  <p><span>Прибыль в день</span><span>24,23 $</span></p>
+                  <p><span>Прибыль в день</span><span>24,23 $</span></p>
+                </div>
+                <div class="equipment-page__bottom">
+                  <p><span>1070000 $</span>
+                    <button class="btn btn--cost buy" type="button">Заказать</button>
+                  </p>
+                </div>
+              </div>
+              <div class="equipment-page__info" data-id="2">
+                <div class="equipment-page__top">
+                  <p><span>Потребление — 3610 W</span><span>Хешрейт — 190 TH/s</span></p>
+                  <p><span>Добываемые монеты — BTC</span><span>Алгоритм — SHA-256</span></p>
+                </div>
+                <h5>Расчет прибыли</h5>
+                <div class="equipment-page__middle">
+                  <p><span>Расход э/э за день</span><span>2842,56</span></p>
+                  <p><span>Доход в день</span><span>2866,79 $</span></p>
+                  <p><span>Прибыль в день</span><span>24,23 $</span></p>
+                  <p><span>Прибыль в день</span><span>24,23 $</span></p>
+                </div>
+                <div class="equipment-page__bottom">
+                  <p><span>2070000 $</span>
+                    <button class="btn btn--cost buy" type="button">Заказать</button>
+                  </p>
+                </div>
+              </div>
+              <div class="equipment-page__info" data-id="3">
                 <div class="equipment-page__top">
                   <p><span>Потребление — 3610 W</span><span>Хешрейт — 190 TH/s</span></p>
                   <p><span>Добываемые монеты — BTC</span><span>Алгоритм — SHA-256</span></p>
@@ -171,17 +235,17 @@
         <div class="modal__item"><span class="form__title">Телефон</span>
           <input class="phone" type="tel" name="" placeholder="">
         </div>
-        <div class="modal__item"><span class="form__title"> Продукт</span>
+        <div class="modal__item productName"><span class="form__title"> Продукт</span>
           <input type="text" name="" placeholder="Bitmain Antminer T21 190 TH/s">
         </div>
-        <div class="modal__item"><span class="form__title"> Цена</span>
+        <div class="modal__item productPrice"><span class="form__title"> Цена</span>
           <input type="text" name="" placeholder="545 000 ₽">
         </div>
         <div class="modal__item">
           <div class="counter">
-            <button type="button">-</button>
-            <input type="text" name="" value="1">
-            <button type="button">+</button>
+            <button class="btn-minus" type="button">-</button>
+            <input type="number" name="" value="1">
+            <button class="btn-plus" type="button">+</button>
           </div>
           <button class="btn" type="submit">Отправить</button>
         </div>

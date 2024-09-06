@@ -33,6 +33,9 @@
     border-left: none;
     border-right: none;
     margin: 0 -20px;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
     @media (min-width: 992px) {
       padding: 50px;
       border-left: solid;

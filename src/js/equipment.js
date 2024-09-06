@@ -1,20 +1,34 @@
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
-const buyBtn = document.querySelectorAll('.buy');
-const body = document.querySelector('body');
-const modal = document.querySelector('.modal');
-const modalClose = document.querySelector('.modal__close');
 const inputsPhone = document.querySelectorAll("[type='tel']");
-buyBtn.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    modal.classList.toggle('active');
-    body.classList.toggle('isLock');
-  });
+
+$('.equipment-page__content .buy').on('click', function () {
+  $('.modal').toggleClass('active');
+  $('body').toggleClass('isLock');
+
+  // const title = $(this).parents('.equipment-page__content').find('h3');
+  // const title1 = $(this)
+  //   .parents('.equipment-page__content')
+  //   .find('.equipment-page__info');
+  const productName = $(this)
+    .parents('.equipment-page__content')
+    .find('h3')
+    .text();
+  const productPrice = $(this)
+    .parents('.equipment-page__info')
+    .find('.equipment-page__bottom span')
+    .text();
+  console.log(productPrice, productName);
+
+  $('.productName input').attr('placeholder', `${productName}`);
+  $('.productPrice input').attr('placeholder', `${productPrice}`);
 });
-modalClose.addEventListener('click', () => {
-  modal.classList.toggle('active');
-  body.classList.toggle('isLock');
+
+$('.modal__close').on('click', () => {
+  $('.modal').toggleClass('active');
+  $('body').toggleClass('isLock');
 });
+
 inputsPhone.forEach((item) => {
   window.intlTelInput(item, {
     utilsScript:
@@ -25,32 +39,39 @@ inputsPhone.forEach((item) => {
   });
 });
 
-burger.addEventListener('click', () => {
-  menu.classList.toggle('isOpen');
-  burger.classList.toggle('isOpen');
-});
-
 const equipmentTabs = document.querySelectorAll('.equipment-page .btns button');
 const equipmentTabsContent = document.querySelectorAll(
   '.equipment-page .equipment-page__info'
 );
 
-equipmentTabs.forEach((tab, tabIndex) => {
-  tab.addEventListener('click', () => {
-    equipmentTabs.forEach((tab) => {
-      tab.classList.remove('active');
-    });
-    tab.classList.add('active');
+const minerBtns = document.querySelectorAll('.equipment-page .btns button');
 
-    // tab.classList.add('active');
+$('.btns button').on('click', function () {
+  const id = $(this).attr('data-id');
+  $(this).siblings().removeClass('active');
+  $(this).addClass('active');
+  $(this)
+    .parents('.equipment-page__content')
+    .find('.equipment-page__info')
+    .removeClass('active');
+  $(this)
+    .parents('.equipment-page__content')
+    .find(`.equipment-page__info[data-id=${id}]`)
+    .addClass('active');
+});
 
-    equipmentTabsContent.forEach((tabContent, tabContentIndex) => {
-      tabContent.classList.remove('active');
-      if (tabIndex === tabContentIndex) {
-        tabContent.classList.add('active');
-      }
-    });
-  });
+const btnMinus = document.querySelector('.modal .counter .btn-minus');
+const btnPlus = document.querySelector('.modal .counter .btn-plus');
+const inputNumber = document.querySelector('.modal .counter input');
+
+btnMinus.addEventListener('click', () => {
+  if (inputNumber.value > 1) {
+    inputNumber.value--;
+  }
+});
+btnPlus.addEventListener('click', () => {
+  inputNumber.value++;
+  console.log(inputNumber.value);
 });
 
 AOS.init({

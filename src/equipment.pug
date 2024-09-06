@@ -43,12 +43,12 @@ body
                     .equipment-page__box
                         img(src="./img/equipment.png", alt="")
                         .equipment-page__content
-                            h3 Bitmain Antminer T21 190 TH/s
+                            h3 Bitmain Antminer T21 100 TH/s
                             .btns
-                                button(type="button").active 120 TX
-                                button(type="button") 122 TX
-                                button(type="button") 124 TX
-                            .equipment-page__info.active
+                                button(type="button")(data-id="1").active 125 TX
+                                button(type="button")(data-id="2") 126 TX
+                                button(type="button")(data-id="3") 130 TX
+                            .equipment-page__info(data-id="1").active
                                 .equipment-page__top
                                     p
                                         span Потребление — 3610 W
@@ -74,7 +74,7 @@ body
                                     p
                                         span 1070000 $
                                         button.btn.btn--cost.buy(type='button') Заказать
-                            .equipment-page__info
+                            .equipment-page__info(data-id="2")
                                 .equipment-page__top
                                     p
                                         span Потребление — 3610 W
@@ -100,7 +100,93 @@ body
                                     p
                                         span 2070000 $
                                         button.btn.btn--cost.buy(type='button') Заказать
-                            .equipment-page__info
+                            .equipment-page__info(data-id="3")
+                                .equipment-page__top
+                                    p
+                                        span Потребление — 3610 W
+                                        span Хешрейт — 190 TH/s
+                                    p
+                                        span Добываемые монеты — BTC
+                                        span Алгоритм — SHA-256
+                                h5 Расчет прибыли
+                                .equipment-page__middle
+                                    p
+                                        span Расход э/э за день
+                                        span 2842,56
+                                    p
+                                        span Доход в день
+                                        span 2866,79 $
+                                    p
+                                        span Прибыль в день
+                                        span 24,23 $
+                                    p
+                                        span Прибыль в день
+                                        span 24,23 $
+                                .equipment-page__bottom
+                                    p
+                                        span 3070000 $
+                                        button.btn.btn--cost.buy(type='button') Заказать
+                    .equipment-page__box
+                        img(src="./img/equipment.png", alt="")
+                        .equipment-page__content
+                            h3 Bitmain Antminer T21 190 TH/s
+                            .btns
+                                button(type="button")(data-id="1").active 125 TX
+                                button(type="button")(data-id="2") 126 TX
+                                button(type="button")(data-id="3") 130 TX
+                            .equipment-page__info(data-id="1").active
+                                .equipment-page__top
+                                    p
+                                        span Потребление — 3610 W
+                                        span Хешрейт — 190 TH/s
+                                    p
+                                        span Добываемые монеты — BTC
+                                        span Алгоритм — SHA-256
+                                h5 Расчет прибыли
+                                .equipment-page__middle
+                                    p
+                                        span Расход э/э за день
+                                        span 2842,56
+                                    p
+                                        span Доход в день
+                                        span 2866,79 $
+                                    p
+                                        span Прибыль в день
+                                        span 24,23 $
+                                    p
+                                        span Прибыль в день
+                                        span 24,23 $
+                                .equipment-page__bottom
+                                    p
+                                        span 1070000 $
+                                        button.btn.btn--cost.buy(type='button') Заказать
+                            .equipment-page__info(data-id="2")
+                                .equipment-page__top
+                                    p
+                                        span Потребление — 3610 W
+                                        span Хешрейт — 190 TH/s
+                                    p
+                                        span Добываемые монеты — BTC
+                                        span Алгоритм — SHA-256
+                                h5 Расчет прибыли
+                                .equipment-page__middle
+                                    p
+                                        span Расход э/э за день
+                                        span 2842,56
+                                    p
+                                        span Доход в день
+                                        span 2866,79 $
+                                    p
+                                        span Прибыль в день
+                                        span 24,23 $
+                                    p
+                                        span Прибыль в день
+                                        span 24,23 $
+                                .equipment-page__bottom
+                                    p
+                                        span 2070000 $
+                                        button.btn.btn--cost.buy(type='button') Заказать
+                            .equipment-page__info(data-id="3")
                                 .equipment-page__top
                                     p
                                         span Потребление — 3610 W
@@ -194,17 +280,17 @@ body
                 .modal__item
                     span.form__title Телефон
                     input(type="tel", name="" placeholder="").phone
-                .modal__item
+                .modal__item.productName
                     span.form__title  Продукт
                     input(type="text", name="" placeholder="Bitmain Antminer T21 190 TH/s")
-                .modal__item
+                .modal__item.productPrice
                     span.form__title  Цена
                     input(type="text", name="" placeholder="545 000 ₽")
                 .modal__item
                     .counter
-                        button(type="button") -
-                        input(type="text", name="" value="1")
-                        button(type="button") +
+                        button(type="button").btn-minus -
+                        input(type="number", name="" value="1")
+                        button(type="button").btn-plus +
                     button(type="submit").btn Отправить
                 p Продолжая, вы соглашаетесь с политикой конфиденциальности
     script(src='https://cdn.jsdelivr.net/npm/intl-tel-input@24.1.1/build/js/intlTelInput.min.js')

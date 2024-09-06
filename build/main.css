@@ -3214,6 +3214,9 @@ img {
   border-right: none;
   margin: 0 -20px;
 }
+.equipment-page__box:not(:last-child) {
+  margin-bottom: 50px;
+}
 @media (min-width: 992px) {
   .equipment-page__box {
     padding: 50px;
